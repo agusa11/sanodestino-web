@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sano Destino | El Taller Primero Yo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#a52e5a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#881645",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1f1a1e",
+                        "error": "#ba1a1a",
+                        "background": "#fff7f9",
+                        "on-tertiary-fixed-variant": "#005316",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#cac6c1",
+                        "on-primary-fixed": "#3f001a",
+                        "tertiary-container": "#0a872c",
+                        "outline-variant": "#dcbfc5",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e6e2dd",
+                        "primary-fixed": "#ffd9e1",
+                        "on-secondary-container": "#666460",
+                        "inverse-primary": "#ffb1c4",
+                        "secondary": "#605e5a",
+                        "on-tertiary-fixed": "#002105",
+                        "on-background": "#1f1a1e",
+                        "surface-variant": "#eae0e5",
+                        "surface-container-low": "#fcf1f6",
+                        "surface-container-highest": "#eae0e5",
+                        "on-surface-variant": "#564146",
+                        "secondary-container": "#e6e2dd",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1d1b19",
+                        "tertiary-fixed": "#8dfa8f",
+                        "inverse-surface": "#342f33",
+                        "tertiary": "#006b1f",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#e2d7dc",
+                        "surface-container-high": "#f0e5ea",
+                        "surface": "#fff7f9",
+                        "on-secondary-fixed-variant": "#484643",
+                        "inverse-on-surface": "#f9eef3",
+                        "surface-container": "#f6ebf0",
+                        "on-tertiary-container": "#f7fff1",
+                        "tertiary-fixed-dim": "#71dd76",
+                        "outline": "#897176",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#a8315c",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "primary-container": "#c54772",
+                        "surface-bright": "#fff7f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fff7f9; color: #1f1a1e; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .gradient-button {
+            background: linear-gradient(45deg, #a52e5a 0%, #c54772 100%);
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 40px -15px rgba(86, 65, 70, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff7f9]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(86,65,70,0.06)]">
+<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+<a class="text-2xl font-serif italic text-[#a52e5a] hover:opacity-80 transition-opacity" href="#top">Sano Destino</a>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 lg:py-32 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-3/5 z-10">
+<h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8" style="">
+                    Dejá de ponerte <span class="italic" style="">última</span> en tu propia lista.
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10" style="">
+                    Acompaño a mujeres a reconectarse con ellas mismas — desde los hábitos, la mentalidad y la nutrición. Sin culpa. Sin perfección. Con proceso real.
+                </p>
+<a class="gradient-button text-on-primary px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all flex items-center gap-2" href="#formulario">
+                    Quiero mi lugar en el Taller <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="lg:w-2/5 relative">
+<div class="w-full aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="peaceful woman practicing mindfulness in a soft-lit, airy sanctuary with pastel pink tones and warm natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTH43gJ-OO8URY9Ze2ATw0W2TUhr5mPo-xE377rYPzjX-XvXTSXeHMnKSVTjsyBPTWFP7VkgHvieeIRTyhvQaJBaeI2g05qffDOKJrp6wUx3_v4EU6MURYTsiyf9wdy_yHsYTY6Mm2_xamejnOdVrG9bvXCriwf6RBiUg89Un8VFdhe8HZRSkq6JdKydduEy10SdavGZuB3C33wKNIzxqqVnEDXXDW4P6dM7fwP0FWqmv9SWkAXwBbfmiIikXrqaVlOLAqOoHgWjks" style=""/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl max-w-[200px]">
+<p class="font-serif italic text-primary text-lg" style="">Proceso Real</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant mt-1" style="">Sin perfección</p>
+</div>
+</div>
+</section>
+<!-- Para quién es -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="text-4xl lg:text-5xl font-serif mb-8" style="">Este espacio es para vos si...</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start group">
+<span class="material-symbols-outlined text-primary mt-1" style="">favorite</span>
+<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Llegás al final del día vacía y sin haber hecho nada para vos.</p>
+</div>
+<div class="flex gap-4 items-start group">
+<span class="material-symbols-outlined text-primary mt-1" style="">auto_awesome</span>
+<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Sabés lo que tenés que hacer — pero no podés sostenerlo.</p>
+</div>
+<div class="flex gap-4 items-start group">
+<span class="material-symbols-outlined text-primary mt-1" style="">group</span>
+<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Siempre estás para todos, menos para vos misma.</p>
+</div>
+<div class="flex gap-4 items-start group">
+<span class="material-symbols-outlined text-primary mt-1" style="">refresh</span>
+<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Empezás de cero una y otra vez y te culpás cuando fallás.</p>
+</div>
+<div class="flex gap-4 items-start group">
+<span class="material-symbols-outlined text-primary mt-1" style="">lightbulb</span>
+<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Sentís que algo tiene que cambiar pero no sabés por dónde empezar.</p>
+</div>
+</div>
+<p class="mt-12 text-xl font-serif italic text-primary" style="">
+                            Si te sentiste identificada con algo de esto — bienvenida. Estás exactamente donde tenés que estar.
+                        </p>
+</div>
+<div class="relative grid grid-cols-2 gap-4">
+<img class="rounded-2xl w-full h-64 object-cover mt-12" data-alt="aesthetic stack of wellness journals and a cup of tea on a textured linen surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA0WRS42sOAjuXBJskDEZz9BhhdAUfTiVeflgKuCJxe_QoSj_KFLqGAELa60OzctftHdv-d9PTnIk0z5xQC00koPBqP3DrEskmR0zqLE2eAN6yBi8F9hp0jc9R0PlCAAHyBjIPpASAXUIbQRgEOpiYcbzPbnDwZR9W6edDLq8wbCQ522rquZHEezjajfgRMuLVaSmIKreVd5zT3YMGPopaTmbKH642SK_TuUcXsc_bUA1_PFLSuR572T0Sdg5zRKo0erwsx-R8OB0n" style=""/>
+<img class="rounded-2xl w-full h-80 object-cover" data-alt="close-up of hands holding a warm bowl of nourishing oatmeal with berries, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFW9tFAopZud3VN06e-6CVVjOFQCpHq44eqLgr3RypGAd4Gd0cD_CjBsezTxAwPfU8MhtrShGXvTkoYleFbf8lPQTzf8F3rUg-xKpf8T4sMEwh2PBaz3rrriGaVDU1XEnEhaLFG7Io479znYwnMu-JR5gFYUXittWbLivp6udoybUyXzBY_j6I16qxl55KN7d06BR64TjjqpRLt5olFOlwoYFgSdzsFpoRGKQqgJHQotqISc1EEPIewOtnZCnraN4tmXrS8o93C-Bh" style=""/>
+</div>
+</div>
+</div>
+</section>
+<!-- Quién soy -->
+<section class="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<img class="rounded-3xl shadow-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="Portrait of Agus, the nutritionist, in a warm pink-toned circular frame." src="https://lh3.googleusercontent.com/aida/ADBb0uirS4SQWx6OSdgC9wZjQGPTYbrwdKVx0hlxfykd7BMWluRhzj5uYGy9p9V0x-W5XG3HLQYLO6DTXMQEP7fgr0hsq4kO64ItQhdrCgExuScqjB7hrJrUcHEAhWK5mpDq3pg6EZHVuG3PQq9MgBWIXzC2tENG4UmrNi5TKUlvQRY0oPRV7rR1SmicL4lFGShLiWG8siwiM-IRq7GqMvxE_q2hRtYRWjoi1zQtHYho3Sv0jMJq_lu25so6b1ioPcvN3cCnQ3ZuWd6yFg" style=""/>
+<div class="absolute -top-6 -right-6 bg-primary text-on-primary p-6 rounded-full w-24 h-24 flex items-center justify-center text-center leading-tight font-serif italic text-sm" style="">Bienestar integral y mentalidad</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="label-md uppercase tracking-[0.2em] text-primary mb-4 block" style="">Conoceme</span>
+<h2 class="text-5xl font-serif mb-8" style="">Hola, soy Agus.</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-6" style="">Soy nutricionista — pero lo que realmente hago es acompañar a mujeres a reconectarse con ellas mismas. No con dietas. No con planes perfectos. Con proceso real, con preguntas honestas y con el espacio que nadie les había dado para ponerse primeras en su propia vida.</p>
+<p class="text-xl text-on-surface-variant leading-relaxed" style="">
+                    Sé lo que es estar para todos y olvidarte de vos. Mi misión es devolverte ese lugar de prioridad que te corresponde, con herramientas reales y compasión. Acompaño a mujeres de todo el mundo en ese camino. Y si llegaste hasta acá, sospecho que algo en vos sabe que es tu momento.</p>
+</div>
+</section>
+<!-- Lo que ofrezco -->
+<section class="py-24 px-8 bg-surface-container">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="text-4xl font-serif mb-16" style="">¿Cómo puedo acompañarte?</h2>
+<div class="max-w-3xl mx-auto bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] editorial-shadow text-left">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div>
+<h3 class="text-2xl font-serif mb-2" style="">Taller Primero Yo — El Inicio</h3>
+<p class="text-on-surface-variant italic mb-4" style="">La puerta de entrada. 90 min Online · Mayo 2026</p>
+<span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-fixed-variant rounded-full text-xs font-bold uppercase tracking-wider" style="">Próximamente</span>
+</div>
+<a class="text-primary font-medium hover:underline flex items-center gap-2 group transition-all" href="#taller-detalle">
+                            Ver todos los detalles <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- El Taller Detalle -->
+<section class="py-24 px-8 max-w-7xl mx-auto" id="taller-detalle">
+<div class="bg-surface-container-low rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-sm">
+<div class="p-8 lg:p-16 mx-auto max-w-4xl">
+<span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant rounded-lg text-xs font-bold tracking-widest uppercase mb-6" style="">PRÓXIMO LANZAMIENTO — MAYO 2026</span>
+<h2 class="text-5xl font-serif mb-4" style="">Primero Yo: El Inicio</h2>
+<p class="text-2xl font-serif italic text-on-surface-variant mb-10" style="">Descubrí en 90 minutos cómo reconectar con vos misma...</p>
+<div class="space-y-8 mb-12">
+<div>
+<p class="font-bold uppercase text-xs tracking-widest text-primary mb-4" style="">En 90 minutos vas a:</p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Reconectar con tu cuerpo</li>
+<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Identificar qué te quitas</li>
+<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Descubrir por qué no duran los habitos</li>
+<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Crear TU plan realista</li>
+<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> 3 momentos concretos</li>
+</ul>
+</div>
+<div class="bg-surface-container-highest/30 p-6 rounded-2xl">
+<p class="font-bold uppercase text-xs tracking-widest text-primary mb-4" style="">Incluye:</p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Taller grabado</span>
+<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Ebook</span>
+<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Hoja de trabajo</span>
+<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Mini guía PDF</span>
+<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Descuento exclusivo</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-6">
+<a class="gradient-button text-on-primary inline-block text-center w-full sm:w-auto px-10 py-4 rounded-full text-lg font-medium" href="#formulario">Quiero mi lugar</a>
+<span class="text-on-surface-variant italic text-sm flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-error scale-75" style='font-variation-settings: "FILL" 1;'>error</span> 
+                            Solo 30 plazas disponibles.
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Formulario -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-3xl mx-auto bg-surface-container-lowest p-8 lg:p-16 rounded-[3rem] editorial-shadow border border-outline-variant/10" id="formulario">
+<div class="text-center mb-12" id="signup-heading">
+<h2 class="text-4xl font-serif mb-4" style="">¿Querés que te avise cuando abran las plazas?</h2>
+<p class="text-on-surface-variant italic" style="">Dejá tus datos acá abajo y sé la primera en enterarte.</p>
+</div>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfFcTDbuHnZxL0-9OAwiWizSVnyma4UPgBW8wX_Q-ZV8ldQsg/formResponse" class="space-y-8" id="signup-form" method="POST" target="hidden_iframe">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">¿Cómo te llamás?</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.84739912" placeholder="Tu nombre" required type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">Email</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.561321549" placeholder="hola@ejemplo.com" required type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">Ubicación</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.1278154470" placeholder="Ciudad, País" required type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">¿Qué es lo que más te cuesta?</label>
+<select class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.1418924858" required>
+<option disabled selected value="">Elegí una opción</option>
+<option>Habitos</option>
+<option>Ponerme primero</option>
+<option>Saber que quiero</option>
+<option>Sostener cambios</option>
+<option>Todo lo anterior</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">¿Cómo llegaste?</label>
+<select class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.1493886869" required>
+<option disabled selected value="">Elegí una opción</option>
+<option>Instagram</option>
+<option>Recomendacion</option>
+<option>Google</option>
+<option>Otra red</option>
+<option>Otro</option>
+</select>
+</div>
+<div class="pt-6">
+<button class="w-full gradient-button text-on-primary py-5 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all" style="" type="submit">
+                            Sí, quiero mi lugar anticipado 🌸
+                        </button>
+<p class="text-center text-xs text-on-surface-variant mt-4 italic" style="">Sin spam. Solo contenido de valor.</p>
+</div>
+</form>
+<div class="text-center py-12" id="thankyou" style="display:none;">
+<span class="material-symbols-outlined text-primary text-6xl mb-6 block" style='font-variation-settings: "FILL" 1;'>favorite</span>
+<h3 class="text-4xl font-serif text-primary mb-4" style="">¡Listo, qué alegría tenerte acá!</h3>
+<p class="text-xl font-serif italic text-on-surface-variant mb-2" style="">Recibimos tu mensaje 🌸</p>
+<p class="text-lg text-on-surface-variant" style="">Te vamos a avisar apenas abran las plazas.</p>
+</div>
+</div>
+</section>
+<!-- Cierre -->
+<section class="py-32 px-8 text-center max-w-4xl mx-auto">
+<h2 class="text-5xl lg:text-6xl font-serif italic text-primary leading-tight mb-12" style="">
+                Tu turno no es cuando termines con todo lo demás. Tu turno es ahora.
+            </h2>
+<div class="flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl" style="">eco</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#eae0e5] py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-center md:text-left">
+<span class="text-xl font-serif italic text-[#1f1a1e]" style="">Sano Destino</span>
+<p class="text-[#1f1a1e]/50 text-sm mt-2" style="">© 2026 Sano Destino.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino" style="">Instagram: @sanodestino</a>
+<a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com" style="">Email: sanodestino@gmail.com</a>
+<a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="#" style="">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+<script>
+  (function () {
+    var form = document.getElementById('signup-form');
+    var heading = document.getElementById('signup-heading');
+    var thankyou = document.getElementById('thankyou');
+    form.addEventListener('submit', function () {
+      setTimeout(function () {
+        form.style.display = 'none';
+        heading.style.display = 'none';
+        thankyou.style.display = 'block';
+        document.getElementById('formulario').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 600);
+    });
+  })();
+</script>
+</body></html>
