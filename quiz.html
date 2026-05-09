@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sano Destino | ¿Cuál es tu próximo paso?</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary": "#a52e5a",
+        "on-secondary": "#ffffff",
+        "on-primary-fixed-variant": "#881645",
+        "on-error": "#ffffff",
+        "on-surface": "#1f1a1e",
+        "error": "#ba1a1a",
+        "background": "#fff7f9",
+        "on-tertiary-fixed-variant": "#005316",
+        "on-primary": "#ffffff",
+        "secondary-fixed-dim": "#cac6c1",
+        "on-primary-fixed": "#3f001a",
+        "tertiary-container": "#0a872c",
+        "outline-variant": "#dcbfc5",
+        "on-tertiary": "#ffffff",
+        "secondary-fixed": "#e6e2dd",
+        "primary-fixed": "#ffd9e1",
+        "on-secondary-container": "#666460",
+        "inverse-primary": "#ffb1c4",
+        "secondary": "#605e5a",
+        "on-tertiary-fixed": "#002105",
+        "on-background": "#1f1a1e",
+        "surface-variant": "#eae0e5",
+        "surface-container-low": "#fcf1f6",
+        "surface-container-highest": "#eae0e5",
+        "on-surface-variant": "#564146",
+        "secondary-container": "#e6e2dd",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed": "#1d1b19",
+        "tertiary-fixed": "#8dfa8f",
+        "inverse-surface": "#342f33",
+        "tertiary": "#006b1f",
+        "on-primary-container": "#fffbff",
+        "surface-dim": "#e2d7dc",
+        "surface-container-high": "#f0e5ea",
+        "surface": "#fff7f9",
+        "on-secondary-fixed-variant": "#484643",
+        "inverse-on-surface": "#f9eef3",
+        "surface-container": "#f6ebf0",
+        "on-tertiary-container": "#f7fff1",
+        "tertiary-fixed-dim": "#71dd76",
+        "outline": "#897176",
+        "on-error-container": "#93000a",
+        "surface-container-lowest": "#ffffff",
+        "surface-tint": "#a8315c",
+        "primary-fixed-dim": "#ffb1c4",
+        "primary-container": "#c54772",
+        "surface-bright": "#fff7f9"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "fontFamily": {
+        "headline": ["Newsreader", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Inter", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #fff7f9; color: #1f1a1e; }
+  .font-serif { font-family: 'Newsreader', serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  .gradient-button { background: linear-gradient(45deg, #a52e5a 0%, #c54772 100%); }
+  .editorial-shadow { box-shadow: 0 10px 40px -15px rgba(86, 65, 70, 0.06); }
+
+  /* Quiz animations */
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideOut {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(-28px); }
+  }
+  .animate-in  { animation: fadeSlideIn  0.35s ease forwards; }
+  .animate-out { animation: fadeSlideOut 0.25s ease forwards; }
+
+  /* Answer buttons */
+  .answer-btn {
+    transition: all 0.15s ease;
+    cursor: pointer;
+    border: 1.5px solid #dcbfc5;
+    background: #ffffff;
+  }
+  .answer-btn:hover {
+    border-color: #a52e5a;
+    background-color: #fff0f4;
+    transform: translateX(5px);
+  }
+  .answer-btn.selected {
+    border-color: #a52e5a;
+    background-color: #a52e5a;
+    color: white;
+  }
+  .answer-btn.selected .option-letter {
+    background-color: white;
+    color: #a52e5a;
+  }
+
+  /* Progress bar */
+  .progress-fill { transition: width 0.45s ease; }
+
+  /* SVG circle animation */
+  .circle-progress { transition: stroke-dashoffset 1.3s cubic-bezier(0.22, 1, 0.36, 1); }
+
+  /* Section toggle */
+  .hidden-section { display: none; }
+
+  /* Recommended card border highlight */
+  .card-recommended { border-color: #a52e5a !important; box-shadow: 0 0 0 1px #a52e5a22, 0 10px 40px -15px rgba(165,46,90,0.15); }
+</style>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+
+<!-- ─── NAV ─── -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff7f9]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(86,65,70,0.06)]">
+  <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+    <a class="text-2xl font-serif italic text-[#a52e5a] hover:opacity-80 transition-opacity" href="index.html">Sano Destino</a>
+    <a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="#quiz-section">Empezar el quiz</a>
+  </div>
+</nav>
+
+<main class="pt-24">
+
+  <!-- ─── HERO ─── -->
+  <section class="relative px-8 py-20 lg:py-32 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <div class="lg:w-3/5 z-10">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-widest mb-8">
+        <span class="material-symbols-outlined text-base">quiz</span> Test gratuito — 2 minutos
+      </span>
+      <h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8">
+        ¿Cuál es tu <span class="italic text-primary">próximo paso</span>?
+      </h1>
+      <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
+        Respondé 6 preguntas sobre tus hábitos, mentalidad y comportamientos — y descubrí qué tipo de acompañamiento está alineado con donde estás hoy.
+      </p>
+      <a class="gradient-button text-on-primary px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center gap-2" href="#quiz-section">
+        Quiero descubrir mi perfil <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+      <p class="mt-5 text-sm text-on-surface-variant italic">Sin respuestas correctas o incorrectas — solo las tuyas.</p>
+    </div>
+    <div class="lg:w-2/5 relative">
+      <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow bg-surface-container-high">
+        <img alt="Mujer practicando mindfulness" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTH43gJ-OO8URY9Ze2ATw0W2TUhr5mPo-xE377rYPzjX-XvXTSXeHMnKSVTjsyBPTWFP7VkgHvieeIRTyhvQaJBaeI2g05qffDOKJrp6wUx3_v4EU6MURYTsiyf9wdy_yHsYTY6Mm2_xamejnOdVrG9bvXCriwf6RBiUg89Un8VFdhe8HZRSkq6JdKydduEy10SdavGZuB3C33wKNIzxqqVnEDXXDW4P6dM7fwP0FWqmv9SWkAXwBbfmiIikXrqaVlOLAqOoHgWjks"/>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-5 rounded-2xl shadow-xl max-w-[190px]">
+        <p class="font-serif italic text-primary text-base">Resultado en minutos</p>
+        <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-1">Tu perfil personalizado</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SOBRE AGUS ─── -->
+  <section class="bg-surface-container-low py-24 px-8" id="sobre-agus">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-2/5 flex-shrink-0">
+          <div class="relative max-w-sm mx-auto">
+            <img alt="Agus, nutricionista" class="rounded-3xl shadow-2xl w-full grayscale-[15%] hover:grayscale-0 transition-all duration-700" src="agus.jpg"/>
+            <div class="absolute -top-5 -right-5 bg-primary text-on-primary p-5 rounded-full w-24 h-24 flex items-center justify-center text-center leading-tight font-serif italic text-xs shadow-lg">Bienestar integral</div>
+          </div>
+        </div>
+        <div class="w-full md:w-3/5">
+          <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Conoceme</span>
+          <h2 class="text-4xl lg:text-5xl font-serif mb-6">Hola, soy Agus.</h2>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-5">
+            Soy nutricionista — pero lo que realmente hago es acompañar a mujeres a reconectarse con ellas mismas. No con dietas. No con planes perfectos. Con proceso real, preguntas honestas y el espacio que nadie les había dado para ponerse primeras en su propia lista.
+          </p>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+            Trabajo con mujeres que están agotadas de vivir para todos los demás, que saben lo que deberían hacer pero no logran sostenerlo, o que simplemente sienten que se perdieron a sí mismas en el camino. Si algo de eso resuena, estás exactamente donde tenés que estar.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow font-medium text-on-surface-variant">Nutricionista</span>
+            <span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow font-medium text-on-surface-variant">Mindset & Hábitos</span>
+            <span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow font-medium text-on-surface-variant">Bienestar Integral</span>
+            <span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow font-medium text-on-surface-variant">Acompañamiento Online</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── QUIZ ─── -->
+  <section class="py-24 px-8" id="quiz-section">
+    <div class="max-w-2xl mx-auto">
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-widest mb-4">El Quiz</span>
+        <h2 class="text-4xl font-serif mb-4">Descubrí tu perfil</h2>
+        <p class="text-on-surface-variant">Elegí la opción que mejor te represente en este momento de tu vida.</p>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="mb-10">
+        <div class="flex justify-between text-xs text-on-surface-variant mb-2">
+          <span id="question-counter">Pregunta 1 de 6</span>
+          <span id="question-percent">0%</span>
+        </div>
+        <div class="h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+          <div class="h-full bg-primary rounded-full progress-fill" id="progress-bar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Questions rendered here -->
+      <div id="questions-container"></div>
+
+      <!-- CTA shown after all questions answered -->
+      <div class="text-center mt-10 hidden-section" id="quiz-cta">
+        <p class="text-on-surface-variant italic mb-6 text-lg font-serif">"Tus respuestas ya cuentan su historia."</p>
+        <p class="text-on-surface-variant mb-8">Completá tus datos para desbloquear tu resultado y recomendación personalizada.</p>
+        <button class="gradient-button text-on-primary px-10 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center gap-3" onclick="showForm()">
+          Desbloquear mi resultado <span class="material-symbols-outlined">lock_open</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── FORM (hidden until quiz complete) ─── -->
+  <section class="py-24 px-8 bg-surface-container-low hidden-section" id="form-section">
+    <div class="max-w-xl mx-auto">
+      <div class="bg-surface-container-lowest p-8 lg:p-12 rounded-[3rem] editorial-shadow border border-outline-variant/10">
+
+        <div class="text-center mb-10">
+          <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style='font-variation-settings: "FILL" 1;'>stars</span>
+          <h2 class="text-3xl font-serif mb-3">Tu resultado está listo</h2>
+          <p class="text-on-surface-variant">Completá tus datos para ver tu perfil y recomendación personalizada.</p>
+        </div>
+
+        <!--
+          IMPORTANTE: Reemplazá los valores marcados con REEMPLAZAR por los IDs reales de tu Google Form.
+          Instrucciones al final del archivo en los comentarios.
+        -->
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSf84kUvNHOLinCxx4y8Jt9LJquuwbomEmyUNSG_6x3MUUDkUw/formResponse" id="lead-form" method="POST" target="hidden_iframe">
+          <div class="space-y-6">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Nombre</label>
+                <input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3 rounded-t-lg" id="input-nombre" name="entry.2100012103" placeholder="Tu nombre" required type="text"/>
+              </div>
+              <div class="space-y-2">
+                <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Apellido</label>
+                <input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3 rounded-t-lg" name="entry.809996262" placeholder="Tu apellido" required type="text"/>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Email</label>
+              <input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3 rounded-t-lg" name="entry.668679109" placeholder="hola@ejemplo.com" required type="email"/>
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">País</label>
+              <input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3 rounded-t-lg" name="entry.155346568" placeholder="Ej: Argentina, México, España..." required type="text"/>
+            </div>
+            <!-- Hidden: quiz score sent to Google Form -->
+            <input id="quiz-score-field" name="entry.1040035715" type="hidden" value=""/>
+          </div>
+          <div class="pt-8">
+            <button class="w-full gradient-button text-on-primary py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all" type="submit">
+              Ver mi resultado →
+            </button>
+            <p class="text-center text-xs text-on-surface-variant mt-4 italic">Sin spam. Solo contenido de valor.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESULTS (hidden until form submitted) ─── -->
+  <section class="py-24 px-8 hidden-section" id="results-section">
+    <div class="max-w-3xl mx-auto">
+
+      <div class="text-center mb-14">
+        <span class="material-symbols-outlined text-primary text-5xl mb-5 block" style='font-variation-settings: "FILL" 1;'>favorite</span>
+        <h2 class="text-4xl lg:text-5xl font-serif mb-3">Tu perfil, <span class="italic text-primary" id="user-name"></span></h2>
+        <p class="text-on-surface-variant text-lg">Basado en tus respuestas, esto es lo que encontramos para vos:</p>
+      </div>
+
+      <!-- Result cards -->
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+
+        <!-- Workshop card -->
+        <div class="bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow border border-outline-variant/10 flex flex-col" id="workshop-card">
+          <div class="text-center mb-6 flex-1">
+            <div class="relative inline-flex items-center justify-center w-32 h-32 mb-4">
+              <svg class="w-32 h-32 -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" fill="none" r="42" stroke="#eae0e5" stroke-width="7"/>
+                <circle class="circle-progress" cx="50" cy="50" fill="none" id="workshop-circle" r="42"
+                  stroke="#a52e5a" stroke-dasharray="264" stroke-dashoffset="264"
+                  stroke-linecap="round" stroke-width="7"/>
+              </svg>
+              <span class="absolute text-2xl font-bold text-primary" id="workshop-pct" style="font-family:'Newsreader',serif">0%</span>
+            </div>
+            <div class="hidden-section mb-3" id="workshop-badge">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span> Recomendado para vos
+              </span>
+            </div>
+            <h3 class="text-xl font-serif mb-3">Taller "Primero Yo"</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Una puerta de entrada de 90 minutos para reconectar con vos misma, entender por qué los hábitos no duran y crear un plan realista y sostenible.
+            </p>
+          </div>
+          <a class="gradient-button text-on-primary py-3 rounded-full text-sm font-medium hover:opacity-90 transition-all flex items-center justify-center gap-2 mt-4" href="index.html#taller-detalle">
+            Conocer el Taller <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Coaching card -->
+        <div class="bg-surface-container-lowest rounded-[2rem] p-8 editorial-shadow border border-outline-variant/10 flex flex-col" id="coaching-card">
+          <div class="text-center mb-6 flex-1">
+            <div class="relative inline-flex items-center justify-center w-32 h-32 mb-4">
+              <svg class="w-32 h-32 -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" fill="none" r="42" stroke="#eae0e5" stroke-width="7"/>
+                <circle class="circle-progress" cx="50" cy="50" fill="none" id="coaching-circle" r="42"
+                  stroke="#a52e5a" stroke-dasharray="264" stroke-dashoffset="264"
+                  stroke-linecap="round" stroke-width="7"/>
+              </svg>
+              <span class="absolute text-2xl font-bold text-primary" id="coaching-pct" style="font-family:'Newsreader',serif">0%</span>
+            </div>
+            <div class="hidden-section mb-3" id="coaching-badge">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span> Recomendado para vos
+              </span>
+            </div>
+            <h3 class="text-xl font-serif mb-3">Acompañamiento Personalizado</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Un proceso individual profundo, diseñado específicamente para tu situación, tus patrones y tus metas. Tu hoja de ruta propia.
+            </p>
+          </div>
+          <button class="gradient-button text-on-primary py-3 px-4 rounded-full text-sm font-medium hover:opacity-90 transition-all flex items-center justify-center gap-2 mt-4 w-full" id="llamada-btn" onclick="requestCall()">
+            Quiero mi llamada de 15 minutos gratuita <span class="material-symbols-outlined text-base">phone_in_talk</span>
+          </button>
+          <p class="hidden-section text-center text-sm text-primary font-medium mt-3" id="llamada-thanks">¡Perfecto! Agus te va a contactar pronto 🌸</p>
+        </div>
+
+      </div>
+
+      <!-- Result message -->
+      <div class="bg-surface-container-low rounded-[2rem] p-8 lg:p-10 text-center editorial-shadow">
+        <p class="font-serif italic text-xl text-primary mb-3" id="result-headline"></p>
+        <p class="text-on-surface-variant leading-relaxed" id="result-description"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── CIERRE ─── -->
+  <section class="py-24 px-8 text-center max-w-4xl mx-auto">
+    <h2 class="text-4xl lg:text-6xl font-serif italic text-primary leading-tight mb-10">
+      Tu turno no es cuando termines con todo lo demás. Tu turno es ahora.
+    </h2>
+    <span class="material-symbols-outlined text-primary text-4xl">eco</span>
+  </section>
+
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer class="bg-[#eae0e5] py-12 px-8">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+    <div class="text-center md:text-left">
+      <span class="text-xl font-serif italic text-[#1f1a1e]">Sano Destino</span>
+      <p class="text-[#1f1a1e]/50 text-sm mt-2">© 2026 Sano Destino.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8">
+      <a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino">Instagram: @sanodestino</a>
+      <a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com">Email: sanodestino@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<!-- ─── SCRIPT ─── -->
+<script>
+const questions = [
+  {
+    text: "¿Cómo sos cuando querés hacer un cambio en tu vida?",
+    options: [
+      { text: "Prefiero arrancar paso a paso, con un camino claro y concreto.", score: 0 },
+      { text: "Necesito estructura y apoyo externo para no perder el rumbo.", score: 1 },
+      { text: "Suelo empezar fuerte pero pierdo el hilo cuando aparecen los obstáculos.", score: 2 },
+      { text: "Siento que mi situación es muy específica y necesita algo personalizado.", score: 3 }
+    ]
+  },
+  {
+    text: "¿Qué pasa con tus hábitos de autocuidado?",
+    options: [
+      { text: "No tengo casi ninguno — no sé ni por dónde empezar.", score: 0 },
+      { text: "Tengo algunos, pero son muy inconsistentes.", score: 1 },
+      { text: "Probé muchas cosas y nada termina de durar.", score: 2 },
+      { text: "Sé lo que necesito, pero no logro priorizarme a mí misma.", score: 3 }
+    ]
+  },
+  {
+    text: "Cuando algo no funciona, ¿qué hacés?",
+    options: [
+      { text: "Lo intento de nuevo con una estrategia nueva.", score: 0 },
+      { text: "Busco información o apoyo externo y sigo adelante.", score: 1 },
+      { text: "Me frustro, lo dejo... y después vuelvo a intentarlo. El ciclo se repite.", score: 2 },
+      { text: "Siento que hay un patrón que se repite y no sé cómo romperlo.", score: 3 }
+    ]
+  },
+  {
+    text: "¿Cómo te relacionás con vos misma hoy?",
+    options: [
+      { text: "Recién empiezo a darme cuenta de que algo tiene que cambiar.", score: 0 },
+      { text: "Tengo conciencia de lo que necesito, pero me falta un punto de partida.", score: 1 },
+      { text: "Hay creencias o emociones más profundas que bloquean mis avances.", score: 2 },
+      { text: "Me perdí a mí misma y necesito una guía muy personalizada.", score: 3 }
+    ]
+  },
+  {
+    text: "¿Qué tipo de acompañamiento sentís que te va mejor?",
+    options: [
+      { text: "Aprendo bien en grupo — la energía colectiva me motiva.", score: 0 },
+      { text: "Un punto de partida claro con herramientas que puedo aplicar sola.", score: 1 },
+      { text: "Algo más personalizado a mi ritmo y situación específica.", score: 2 },
+      { text: "Alguien que me conozca de verdad y trabaje con mi caso particular.", score: 3 }
+    ]
+  },
+  {
+    text: "¿Cuál es tu mayor obstáculo hoy?",
+    options: [
+      { text: "No saber por dónde empezar.", score: 0 },
+      { text: "La falta de constancia y motivación.", score: 1 },
+      { text: "Patrones que se repiten aunque sé lo que tengo que hacer.", score: 2 },
+      { text: "Algo más profundo que no logro resolver sola.", score: 3 }
+    ]
+  }
+];
+
+const LETTERS = ['A', 'B', 'C', 'D'];
+let currentQ = 0;
+let totalScore = 0;
+let userEmail = '';
+
+function renderQuestion(index) {
+  const q = questions[index];
+  const pct = Math.round((index / questions.length) * 100);
+
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('question-counter').textContent = `Pregunta ${index + 1} de ${questions.length}`;
+  document.getElementById('question-percent').textContent = pct + '%';
+
+  document.getElementById('questions-container').innerHTML = `
+    <div class="animate-in" id="q-card">
+      <div class="bg-surface-container-lowest rounded-[2rem] p-8 lg:p-10 editorial-shadow border border-outline-variant/10">
+        <p class="text-xs uppercase tracking-widest text-primary font-bold mb-4">Pregunta ${index + 1} de ${questions.length}</p>
+        <h3 class="text-2xl lg:text-3xl font-serif leading-snug mb-8">${q.text}</h3>
+        <div class="space-y-3">
+          ${q.options.map((opt, i) => `
+            <button class="answer-btn w-full text-left p-4 rounded-xl flex items-start gap-4"
+              onclick="selectAnswer(${index}, ${i}, ${opt.score})">
+              <span class="option-letter flex-shrink-0 w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold flex items-center justify-center mt-0.5">${LETTERS[i]}</span>
+              <span class="text-base leading-relaxed">${opt.text}</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function selectAnswer(qIndex, aIndex, score) {
+  // Highlight chosen option and disable all
+  const btns = document.querySelectorAll('.answer-btn');
+  btns[aIndex].classList.add('selected');
+  btns.forEach(b => b.style.pointerEvents = 'none');
+
+  totalScore += score;
+  currentQ++;
+
+  setTimeout(() => {
+    const card = document.getElementById('q-card');
+    if (card) card.classList.add('animate-out');
+
+    setTimeout(() => {
+      if (currentQ < questions.length) {
+        renderQuestion(currentQ);
+      } else {
+        // All done
+        document.getElementById('questions-container').innerHTML = '';
+        document.getElementById('progress-bar').style.width = '100%';
+        document.getElementById('question-counter').textContent = '¡Todo listo!';
+        document.getElementById('question-percent').textContent = '100%';
+        document.getElementById('quiz-cta').classList.remove('hidden-section');
+        document.getElementById('quiz-score-field').value = totalScore;
+      }
+    }, 250);
+  }, 420);
+}
+
+function showForm() {
+  document.getElementById('quiz-section').classList.add('hidden-section');
+  const form = document.getElementById('form-section');
+  form.classList.remove('hidden-section');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+}
+
+function showResults(firstName) {
+  document.getElementById('form-section').classList.add('hidden-section');
+  const resultsEl = document.getElementById('results-section');
+  resultsEl.classList.remove('hidden-section');
+
+  // Percentages: score 0–18 maps to coaching 20–80%
+  const maxScore = questions.length * 3; // 18
+  const coachingPct = Math.max(20, Math.min(80, Math.round(20 + (totalScore / maxScore) * 60)));
+  const workshopPct = 100 - coachingPct;
+
+  document.getElementById('user-name').textContent = firstName || 'vos';
+
+  // Animate circles and numbers after a short delay
+  setTimeout(() => {
+    const circ = 264; // 2π × r42
+    document.getElementById('workshop-circle').style.strokeDashoffset = circ - (workshopPct / 100) * circ;
+    document.getElementById('coaching-circle').style.strokeDashoffset  = circ - (coachingPct  / 100) * circ;
+
+    animateCount('workshop-pct', workshopPct);
+    animateCount('coaching-pct', coachingPct);
+
+    // Show recommended badge and highlight card
+    if (workshopPct >= coachingPct) {
+      document.getElementById('workshop-badge').classList.remove('hidden-section');
+      document.getElementById('workshop-card').classList.add('card-recommended');
+    } else {
+      document.getElementById('coaching-badge').classList.remove('hidden-section');
+      document.getElementById('coaching-card').classList.add('card-recommended');
+    }
+
+    // Personalised result message
+    if (workshopPct > coachingPct) {
+      document.getElementById('result-headline').textContent = '"Tu momento de empezar es ahora."';
+      document.getElementById('result-description').textContent =
+        'Tu perfil indica que estás lista para dar el primer paso con estructura clara y contención grupal. El Taller "Primero Yo" es el lugar ideal para reconectar con vos misma, entender tus patrones y crear hábitos que realmente duren.';
+    } else if (coachingPct > workshopPct) {
+      document.getElementById('result-headline').textContent = '"Tu situación merece atención profunda y personalizada."';
+      document.getElementById('result-description').textContent =
+        'Tu perfil muestra que tenés patrones más arraigados que necesitan un acompañamiento individual. El coaching personalizado te va a dar la hoja de ruta diseñada exactamente para vos — a tu ritmo, desde tu historia.';
+    } else {
+      document.getElementById('result-headline').textContent = '"Estás en un punto de inflexión."';
+      document.getElementById('result-description').textContent =
+        'Tu perfil muestra un equilibrio entre las dos opciones. Te recomendamos comenzar con el Taller como primer paso y luego evaluar si el acompañamiento personalizado es tu próxima etapa.';
+    }
+  }, 350);
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+}
+
+function animateCount(id, target) {
+  const el = document.getElementById(id);
+  const start = performance.now();
+  const duration = 1300;
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.round(eased * target) + '%';
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+// Form submit → capture data, ensure score is set, then show results
+document.getElementById('lead-form').addEventListener('submit', function () {
+  const name = document.getElementById('input-nombre').value.trim();
+  userEmail = this.querySelector('input[name="entry.668679109"]').value.trim();
+  document.getElementById('quiz-score-field').value = totalScore; // ensure score is current
+  setTimeout(() => showResults(name), 750);
+});
+
+function requestCall() {
+  const name = document.getElementById('user-name').textContent;
+  const btn = document.getElementById('llamada-btn');
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+  document.getElementById('llamada-thanks').classList.remove('hidden-section');
+
+  // Silently submit a second entry to the same Google Form as a call request marker
+  const callForm = document.createElement('form');
+  callForm.method = 'POST';
+  callForm.action = 'https://docs.google.com/forms/d/e/1FAIpQLSf84kUvNHOLinCxx4y8Jt9LJquuwbomEmyUNSG_6x3MUUDkUw/formResponse';
+  callForm.target = 'hidden_iframe';
+  callForm.style.display = 'none';
+
+  const fields = {
+    'entry.2100012103': '🌸 LLAMADA - ' + name,
+    'entry.668679109': userEmail,
+    'entry.1040035715': String(totalScore)
+  };
+  Object.entries(fields).forEach(([name, value]) => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = name;
+    input.value = value;
+    callForm.appendChild(input);
+  });
+
+  document.body.appendChild(callForm);
+  callForm.submit();
+  setTimeout(() => document.body.removeChild(callForm), 1000);
+}
+
+// Boot
+renderQuestion(0);
+</script>
+
+<!--
+  ════════════════════════════════════════════════════════
+  CÓMO CONECTAR TU GOOGLE FORM (3 pasos)
+  ════════════════════════════════════════════════════════
+
+  1. Creá un formulario en forms.google.com con estos campos:
+       • Nombre
+       • Apellido
+       • Email
+       • País
+       • Puntaje del quiz  (campo oculto / respuesta corta)
+
+  2. Abrí las herramientas del desarrollador del formulario
+     (clic derecho → Inspeccionar → buscar los input con name="entry.XXXXXXX")
+     y copiá los IDs de cada campo.
+
+  3. En este archivo, reemplazá:
+       • REEMPLAZAR_CON_URL_DE_GOOGLE_FORM  → la URL de envío del formulario
+         (terminada en /formResponse, no en /viewform)
+       • entry.REEMPLAZAR_NOMBRE            → entry.XXXXXXXXX de tu campo Nombre
+       • entry.REEMPLAZAR_APELLIDO          → entry.XXXXXXXXX de tu campo Apellido
+       • entry.REEMPLAZAR_EMAIL             → entry.XXXXXXXXX de tu campo Email
+       • entry.REEMPLAZAR_PAIS             → entry.XXXXXXXXX de tu campo País
+       • entry.REEMPLAZAR_PUNTAJE          → entry.XXXXXXXXX de tu campo Puntaje
+
+  ════════════════════════════════════════════════════════
+-->
+
+</body>
+</html>
