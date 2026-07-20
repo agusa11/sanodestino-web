@@ -12,31 +12,31 @@ tailwind.config = {
   theme: {
     extend: {
       "colors": {
-        "primary": "#a52e5a",
+        "primary": "#A91E5C",
         "on-secondary": "#ffffff",
-        "on-primary-fixed-variant": "#881645",
+        "on-primary-fixed-variant": "#8C0647",
         "on-error": "#ffffff",
-        "on-surface": "#1f1a1e",
+        "on-surface": "#241B1F",
         "error": "#ba1a1a",
-        "background": "#fff7f9",
+        "background": "#FAF6F0",
         "on-tertiary-fixed-variant": "#005316",
         "on-primary": "#ffffff",
         "secondary-fixed-dim": "#cac6c1",
         "on-primary-fixed": "#3f001a",
         "tertiary-container": "#0a872c",
-        "outline-variant": "#dcbfc5",
+        "outline-variant": "#D8C7A8",
         "on-tertiary": "#ffffff",
         "secondary-fixed": "#e6e2dd",
-        "primary-fixed": "#ffd9e1",
+        "primary-fixed": "#F9D7E2",
         "on-secondary-container": "#666460",
         "inverse-primary": "#ffb1c4",
         "secondary": "#605e5a",
         "on-tertiary-fixed": "#002105",
-        "on-background": "#1f1a1e",
-        "surface-variant": "#eae0e5",
-        "surface-container-low": "#fcf1f6",
-        "surface-container-highest": "#eae0e5",
-        "on-surface-variant": "#564146",
+        "on-background": "#241B1F",
+        "surface-variant": "#E4D6BE",
+        "surface-container-low": "#F5EEE1",
+        "surface-container-highest": "#E4D6BE",
+        "on-surface-variant": "#241B1F",
         "secondary-container": "#e6e2dd",
         "error-container": "#ffdad6",
         "on-secondary-fixed": "#1d1b19",
@@ -45,20 +45,20 @@ tailwind.config = {
         "tertiary": "#006b1f",
         "on-primary-container": "#fffbff",
         "surface-dim": "#e2d7dc",
-        "surface-container-high": "#f0e5ea",
-        "surface": "#fff7f9",
+        "surface-container-high": "#EBDFC9",
+        "surface": "#FAF6F0",
         "on-secondary-fixed-variant": "#484643",
         "inverse-on-surface": "#f9eef3",
-        "surface-container": "#f6ebf0",
+        "surface-container": "#F0E6D4",
         "on-tertiary-container": "#f7fff1",
         "tertiary-fixed-dim": "#71dd76",
-        "outline": "#897176",
+        "outline": "#8C7A61",
         "on-error-container": "#93000a",
         "surface-container-lowest": "#ffffff",
         "surface-tint": "#a8315c",
         "primary-fixed-dim": "#ffb1c4",
-        "primary-container": "#c54772",
-        "surface-bright": "#fff7f9"
+        "primary-container": "#C93774",
+        "surface-bright": "#FAF6F0"
       },
       "borderRadius": {
         "DEFAULT": "0.25rem",
@@ -76,11 +76,11 @@ tailwind.config = {
 }
 </script>
 <style>
-  body { font-family: 'Inter', sans-serif; background-color: #fff7f9; color: #1f1a1e; }
+  body { font-family: 'Inter', sans-serif; background-color: #FAF6F0; color: #241B1F; }
   .font-serif { font-family: 'Newsreader', serif; }
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-  .gradient-button { background: linear-gradient(45deg, #a52e5a 0%, #c54772 100%); }
-  .editorial-shadow { box-shadow: 0 10px 40px -15px rgba(86, 65, 70, 0.06); }
+  .gradient-button { background: linear-gradient(45deg, #A91E5C 0%, #C93774 100%); }
+  .editorial-shadow { box-shadow: 0 10px 40px -15px rgba(36, 27, 31, 0.06); }
 
   /* Quiz animations */
   @keyframes fadeSlideIn {
@@ -98,22 +98,22 @@ tailwind.config = {
   .answer-btn {
     transition: all 0.15s ease;
     cursor: pointer;
-    border: 1.5px solid #dcbfc5;
+    border: 1.5px solid #D8C7A8;
     background: #ffffff;
   }
   .answer-btn:hover {
-    border-color: #a52e5a;
-    background-color: #fff0f4;
+    border-color: #A91E5C;
+    background-color: #FBF0E4;
     transform: translateX(5px);
   }
   .answer-btn.selected {
-    border-color: #a52e5a;
-    background-color: #a52e5a;
+    border-color: #A91E5C;
+    background-color: #A91E5C;
     color: white;
   }
   .answer-btn.selected .option-letter {
     background-color: white;
-    color: #a52e5a;
+    color: #A91E5C;
   }
 
   /* Progress bar */
@@ -126,16 +126,16 @@ tailwind.config = {
   .hidden-section { display: none; }
 
   /* Recommended card border highlight */
-  .card-recommended { border-color: #a52e5a !important; box-shadow: 0 0 0 1px #a52e5a22, 0 10px 40px -15px rgba(165,46,90,0.15); }
+  .card-recommended { border-color: #A91E5C !important; box-shadow: 0 0 0 1px #A91E5C22, 0 10px 40px -15px rgba(169,30,92,0.15); }
 </style>
 </head>
 <body class="bg-surface text-on-surface overflow-x-hidden">
 
 <!-- ─── NAV ─── -->
-<nav class="fixed top-0 w-full z-50 bg-[#fff7f9]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(86,65,70,0.06)]">
+<nav class="fixed top-0 w-full z-50 bg-[#FAF6F0]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(36,27,31,0.06)]">
   <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
-    <a class="text-2xl font-serif italic text-[#a52e5a] hover:opacity-80 transition-opacity" href="index.html">Sano Destino</a>
-    <a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="#quiz-section">Empezar el quiz</a>
+    <a class="text-2xl font-serif italic text-[#A91E5C] hover:opacity-80 transition-opacity" href="index.html">Sano Destino</a>
+    <a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="programa.html">Programa + Coaching</a>
   </div>
 </nav>
 
@@ -304,9 +304,9 @@ tailwind.config = {
           <div class="text-center mb-6 flex-1">
             <div class="relative inline-flex items-center justify-center w-32 h-32 mb-4">
               <svg class="w-32 h-32 -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" fill="none" r="42" stroke="#eae0e5" stroke-width="7"/>
+                <circle cx="50" cy="50" fill="none" r="42" stroke="#E4D6BE" stroke-width="7"/>
                 <circle class="circle-progress" cx="50" cy="50" fill="none" id="workshop-circle" r="42"
-                  stroke="#a52e5a" stroke-dasharray="264" stroke-dashoffset="264"
+                  stroke="#A91E5C" stroke-dasharray="264" stroke-dashoffset="264"
                   stroke-linecap="round" stroke-width="7"/>
               </svg>
               <span class="absolute text-2xl font-bold text-primary" id="workshop-pct" style="font-family:'Newsreader',serif">0%</span>
@@ -331,9 +331,9 @@ tailwind.config = {
           <div class="text-center mb-6 flex-1">
             <div class="relative inline-flex items-center justify-center w-32 h-32 mb-4">
               <svg class="w-32 h-32 -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" fill="none" r="42" stroke="#eae0e5" stroke-width="7"/>
+                <circle cx="50" cy="50" fill="none" r="42" stroke="#E4D6BE" stroke-width="7"/>
                 <circle class="circle-progress" cx="50" cy="50" fill="none" id="coaching-circle" r="42"
-                  stroke="#a52e5a" stroke-dasharray="264" stroke-dashoffset="264"
+                  stroke="#A91E5C" stroke-dasharray="264" stroke-dashoffset="264"
                   stroke-linecap="round" stroke-width="7"/>
               </svg>
               <span class="absolute text-2xl font-bold text-primary" id="coaching-pct" style="font-family:'Newsreader',serif">0%</span>
@@ -376,15 +376,15 @@ tailwind.config = {
 </main>
 
 <!-- ─── FOOTER ─── -->
-<footer class="bg-[#eae0e5] py-12 px-8">
+<footer class="bg-[#E4D6BE] py-12 px-8">
   <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
     <div class="text-center md:text-left">
-      <span class="text-xl font-serif italic text-[#1f1a1e]">Sano Destino</span>
-      <p class="text-[#1f1a1e]/50 text-sm mt-2">© 2026 Sano Destino.</p>
+      <span class="text-xl font-serif italic text-[#241B1F]">Sano Destino</span>
+      <p class="text-on-surface-variant text-sm mt-2">© 2026 Sano Destino.</p>
     </div>
     <div class="flex flex-wrap justify-center gap-8">
-      <a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino">Instagram: @sanodestino</a>
-      <a class="text-[#1f1a1e]/50 hover:text-[#a52e5a] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com">Email: sanodestino@gmail.com</a>
+      <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino">Instagram: @sanodestino</a>
+      <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com">Email: sanodestino@gmail.com</a>
     </div>
   </div>
 </footer>
