@@ -1,415 +1,426 @@
 <!DOCTYPE html>
-
-<html class="light scroll-smooth" lang="es"><head>
+<html class="light scroll-smooth" lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sano Destino | El Taller Primero Yo</title>
+<title>Sano Destino | Programa + Mentoría 1:1</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary": "#A91E5C",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed-variant": "#8C0647",
-                        "on-error": "#ffffff",
-                        "on-surface": "#241B1F",
-                        "error": "#ba1a1a",
-                        "background": "#FAF6F0",
-                        "on-tertiary-fixed-variant": "#005316",
-                        "on-primary": "#ffffff",
-                        "secondary-fixed-dim": "#cac6c1",
-                        "on-primary-fixed": "#3f001a",
-                        "tertiary-container": "#0a872c",
-                        "outline-variant": "#D8C7A8",
-                        "on-tertiary": "#ffffff",
-                        "secondary-fixed": "#e6e2dd",
-                        "primary-fixed": "#F9D7E2",
-                        "on-secondary-container": "#666460",
-                        "inverse-primary": "#ffb1c4",
-                        "secondary": "#605e5a",
-                        "on-tertiary-fixed": "#002105",
-                        "on-background": "#241B1F",
-                        "surface-variant": "#E4D6BE",
-                        "surface-container-low": "#F5EEE1",
-                        "surface-container-highest": "#E4D6BE",
-                        "on-surface-variant": "#241B1F",
-                        "secondary-container": "#e6e2dd",
-                        "error-container": "#ffdad6",
-                        "on-secondary-fixed": "#1d1b19",
-                        "tertiary-fixed": "#8dfa8f",
-                        "inverse-surface": "#342f33",
-                        "tertiary": "#006b1f",
-                        "on-primary-container": "#fffbff",
-                        "surface-dim": "#e2d7dc",
-                        "surface-container-high": "#EBDFC9",
-                        "surface": "#FAF6F0",
-                        "on-secondary-fixed-variant": "#484643",
-                        "inverse-on-surface": "#f9eef3",
-                        "surface-container": "#F0E6D4",
-                        "on-tertiary-container": "#f7fff1",
-                        "tertiary-fixed-dim": "#71dd76",
-                        "outline": "#8C7A61",
-                        "on-error-container": "#93000a",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-tint": "#a8315c",
-                        "primary-fixed-dim": "#ffb1c4",
-                        "primary-container": "#C93774",
-                        "surface-bright": "#FAF6F0"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Newsreader", "serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Inter", "sans-serif"]
-                    }
-                },
-            },
-        }
-    </script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary": "#A91E5C",
+        "on-secondary": "#ffffff",
+        "on-primary-fixed-variant": "#8C0647",
+        "on-error": "#ffffff",
+        "on-surface": "#241B1F",
+        "error": "#ba1a1a",
+        "background": "#FAF6F0",
+        "on-tertiary-fixed-variant": "#005316",
+        "on-primary": "#ffffff",
+        "secondary-fixed-dim": "#cac6c1",
+        "on-primary-fixed": "#3f001a",
+        "tertiary-container": "#0a872c",
+        "outline-variant": "#D8C7A8",
+        "on-tertiary": "#ffffff",
+        "secondary-fixed": "#e6e2dd",
+        "primary-fixed": "#F9D7E2",
+        "on-secondary-container": "#666460",
+        "inverse-primary": "#ffb1c4",
+        "secondary": "#605e5a",
+        "on-tertiary-fixed": "#002105",
+        "on-background": "#241B1F",
+        "surface-variant": "#E4D6BE",
+        "surface-container-low": "#F5EEE1",
+        "surface-container-highest": "#E4D6BE",
+        "on-surface-variant": "#241B1F",
+        "secondary-container": "#e6e2dd",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed": "#1d1b19",
+        "tertiary-fixed": "#8dfa8f",
+        "inverse-surface": "#342f33",
+        "tertiary": "#006b1f",
+        "on-primary-container": "#fffbff",
+        "surface-dim": "#e2d7dc",
+        "surface-container-high": "#EBDFC9",
+        "surface": "#FAF6F0",
+        "on-secondary-fixed-variant": "#484643",
+        "inverse-on-surface": "#f9eef3",
+        "surface-container": "#F0E6D4",
+        "on-tertiary-container": "#f7fff1",
+        "tertiary-fixed-dim": "#71dd76",
+        "outline": "#8C7A61",
+        "on-error-container": "#93000a",
+        "surface-container-lowest": "#ffffff",
+        "surface-tint": "#a8315c",
+        "primary-fixed-dim": "#ffb1c4",
+        "primary-container": "#C93774",
+        "surface-bright": "#FAF6F0"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "fontFamily": {
+        "headline": ["Newsreader", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Inter", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
 <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FAF6F0; color: #241B1F; }
-        .font-serif { font-family: 'Newsreader', serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .gradient-button {
-            background: linear-gradient(45deg, #A91E5C 0%, #C93774 100%);
-        }
-        .editorial-shadow {
-            box-shadow: 0 10px 40px -15px rgba(36, 27, 31, 0.06);
-        }
-    </style>
+  body { font-family: 'Inter', sans-serif; background-color: #FAF6F0; color: #241B1F; }
+  .font-serif { font-family: 'Newsreader', serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  .gradient-button { background: linear-gradient(45deg, #A91E5C 0%, #C93774 100%); }
+  .editorial-shadow { box-shadow: 0 10px 40px -15px rgba(36, 27, 31, 0.06); }
+  .hidden-section { display: none; }
+</style>
 </head>
 <body class="bg-surface text-on-surface overflow-x-hidden">
-<!-- TopNavBar -->
+
+<!-- ─── NAV ─── -->
 <nav class="fixed top-0 w-full z-50 bg-[#FAF6F0]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(36,27,31,0.06)]">
-<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
-<a class="text-2xl font-serif italic text-[#A91E5C] hover:opacity-80 transition-opacity" href="#top">Sano Destino</a>
-<a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="programa.html">Programa + Coaching</a>
-</div>
+  <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+    <a class="text-2xl font-serif italic text-[#A91E5C] hover:opacity-80 transition-opacity" href="index.html">Sano Destino</a>
+    <div class="flex items-center gap-5">
+      <a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-all" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank" aria-label="Escribime por WhatsApp">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+        <span class="hidden sm:inline text-sm">¿Preguntas? Escribime por WhatsApp</span>
+      </a>
+      <a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="#reservar">Reservar llamada</a>
+    </div>
+  </div>
 </nav>
+
 <main class="pt-24">
-<!-- Hero Section -->
-<section class="relative px-8 py-20 lg:py-32 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-<div class="lg:w-3/5 z-10">
-<h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8" style="">
-                    Dejá de ponerte <span class="italic" style="">última</span> en tu propia lista.
-                </h1>
-<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10" style="">
-                    Acompaño a mujeres a reconectarse con ellas mismas — desde los hábitos, la mentalidad y la nutrición. Sin culpa. Sin perfección. Con proceso real.
-                </p>
-<a class="gradient-button text-on-primary px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all flex items-center gap-2" href="#formulario">
-                    Quiero mi lugar en el Taller <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-<div class="lg:w-2/5 relative">
-<div class="w-full aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow bg-surface-container-high">
-<img class="w-full h-full object-cover" data-alt="peaceful woman practicing mindfulness in a soft-lit, airy sanctuary with pastel pink tones and warm natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTH43gJ-OO8URY9Ze2ATw0W2TUhr5mPo-xE377rYPzjX-XvXTSXeHMnKSVTjsyBPTWFP7VkgHvieeIRTyhvQaJBaeI2g05qffDOKJrp6wUx3_v4EU6MURYTsiyf9wdy_yHsYTY6Mm2_xamejnOdVrG9bvXCriwf6RBiUg89Un8VFdhe8HZRSkq6JdKydduEy10SdavGZuB3C33wKNIzxqqVnEDXXDW4P6dM7fwP0FWqmv9SWkAXwBbfmiIikXrqaVlOLAqOoHgWjks" style=""/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl max-w-[200px]">
-<p class="font-serif italic text-primary text-lg" style="">Proceso Real</p>
-<p class="text-xs uppercase tracking-widest text-on-surface-variant mt-1" style="">Sin perfección</p>
-</div>
-</div>
-</section>
-<!-- Para quién es -->
-<section class="bg-surface-container-low py-24 px-8">
-<div class="max-w-7xl mx-auto">
-<div class="grid lg:grid-cols-2 gap-16 items-start">
-<div>
-<h2 class="text-4xl lg:text-5xl font-serif mb-8" style="">Este espacio es para vos si...</h2>
-<div class="space-y-6">
-<div class="flex gap-4 items-start group">
-<span class="material-symbols-outlined text-primary mt-1" style="">favorite</span>
-<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Llegás al final del día vacía y sin haber hecho nada para vos.</p>
-</div>
-<div class="flex gap-4 items-start group">
-<span class="material-symbols-outlined text-primary mt-1" style="">auto_awesome</span>
-<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Sabés lo que tenés que hacer — pero no podés sostenerlo.</p>
-</div>
-<div class="flex gap-4 items-start group">
-<span class="material-symbols-outlined text-primary mt-1" style="">group</span>
-<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Siempre estás para todos, menos para vos misma.</p>
-</div>
-<div class="flex gap-4 items-start group">
-<span class="material-symbols-outlined text-primary mt-1" style="">refresh</span>
-<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Empezás de cero una y otra vez y te culpás cuando fallás.</p>
-</div>
-<div class="flex gap-4 items-start group">
-<span class="material-symbols-outlined text-primary mt-1" style="">lightbulb</span>
-<p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full" style="">Sentís que algo tiene que cambiar pero no sabés por dónde empezar.</p>
-</div>
-</div>
-<p class="mt-12 text-xl font-serif italic text-primary" style="">
-                            Si te sentiste identificada con algo de esto — bienvenida. Estás exactamente donde tenés que estar.
-                        </p>
-</div>
-<div class="relative grid grid-cols-2 gap-4">
-<img class="rounded-2xl w-full h-64 object-cover mt-12" data-alt="aesthetic stack of wellness journals and a cup of tea on a textured linen surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA0WRS42sOAjuXBJskDEZz9BhhdAUfTiVeflgKuCJxe_QoSj_KFLqGAELa60OzctftHdv-d9PTnIk0z5xQC00koPBqP3DrEskmR0zqLE2eAN6yBi8F9hp0jc9R0PlCAAHyBjIPpASAXUIbQRgEOpiYcbzPbnDwZR9W6edDLq8wbCQ522rquZHEezjajfgRMuLVaSmIKreVd5zT3YMGPopaTmbKH642SK_TuUcXsc_bUA1_PFLSuR572T0Sdg5zRKo0erwsx-R8OB0n" style=""/>
-<img class="rounded-2xl w-full h-80 object-cover" data-alt="close-up of hands holding a warm bowl of nourishing oatmeal with berries, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFW9tFAopZud3VN06e-6CVVjOFQCpHq44eqLgr3RypGAd4Gd0cD_CjBsezTxAwPfU8MhtrShGXvTkoYleFbf8lPQTzf8F3rUg-xKpf8T4sMEwh2PBaz3rrriGaVDU1XEnEhaLFG7Io479znYwnMu-JR5gFYUXittWbLivp6udoybUyXzBY_j6I16qxl55KN7d06BR64TjjqpRLt5olFOlwoYFgSdzsFpoRGKQqgJHQotqISc1EEPIewOtnZCnraN4tmXrS8o93C-Bh" style=""/>
-</div>
-</div>
-</div>
-</section>
-<!-- Quién soy -->
-<section class="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-<div class="w-full md:w-1/2">
-<div class="relative">
-<img class="rounded-3xl shadow-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="Portrait of Agus, the nutritionist, in a warm pink-toned circular frame." src="agus.jpg" style=""/>
-<div class="absolute -top-6 -right-6 bg-primary text-on-primary p-6 rounded-full w-24 h-24 flex items-center justify-center text-center leading-tight font-serif italic text-sm" style="">Bienestar integral y mentalidad</div>
-</div>
-</div>
-<div class="w-full md:w-1/2">
-<span class="label-md uppercase tracking-[0.2em] text-primary mb-4 block" style="">Conoceme</span>
-<h2 class="text-5xl font-serif mb-8" style="">Hola, soy Agus.</h2>
-<p class="text-xl text-on-surface-variant leading-relaxed mb-6" style="">Soy nutricionista — pero lo que realmente hago es acompañar a mujeres a reconectarse con ellas mismas. No con dietas. No con planes perfectos. Con proceso real, con preguntas honestas y con el espacio que nadie les había dado para ponerse primeras en su propia vida.</p>
-<p class="text-xl text-on-surface-variant leading-relaxed" style="">
-                    Sé lo que es estar para todos y olvidarte de vos. Mi misión es devolverte ese lugar de prioridad que te corresponde, con herramientas reales y compasión. Acompaño a mujeres de todo el mundo en ese camino. Y si llegaste hasta acá, sospecho que algo en vos sabe que es tu momento.</p>
-</div>
-</section>
-<!-- El taller es para vos si... -->
-<section class="py-24 px-8 bg-surface">
-<div class="max-w-5xl mx-auto">
-<div class="text-center mb-16">
-<span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">¿Es para mí?</span>
-<h2 class="text-4xl lg:text-5xl font-serif">El taller es para vos si...</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-<div class="bg-surface-container-low p-6 rounded-2xl editorial-shadow flex items-start gap-4">
-<span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5">start</span>
-<p class="text-on-surface-variant leading-relaxed">Querés hacer un cambio real pero no sabés por dónde empezar.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl editorial-shadow flex items-start gap-4">
-<span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5">refresh</span>
-<p class="text-on-surface-variant leading-relaxed">Tus hábitos duran tres días y después volvés al punto de partida.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl editorial-shadow flex items-start gap-4">
-<span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5">schedule</span>
-<p class="text-on-surface-variant leading-relaxed">Tenés poco tiempo y necesitás algo concreto, sin vueltas ni teoría.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl editorial-shadow flex items-start gap-4">
-<span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5">self_improvement</span>
-<p class="text-on-surface-variant leading-relaxed">Querés entender por qué te cuesta tanto sostenerte a vos misma.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl editorial-shadow flex items-start gap-4">
-<span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5">favorite</span>
-<p class="text-on-surface-variant leading-relaxed">Estás lista para ponerte primera, aunque sea por 90 minutos.</p>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl editorial-shadow flex items-start gap-4">
-<span class="material-symbols-outlined text-primary flex-shrink-0 text-2xl mt-0.5">spa</span>
-<p class="text-on-surface-variant leading-relaxed">Buscás un espacio honesto, sin juicio, donde finalmente empezar.</p>
-</div>
-</div>
-<p class="text-center mt-12 text-xl font-serif italic text-primary">Si dijiste "sí" aunque sea a una — este taller es exactamente para vos.</p>
-</div>
-</section>
-<!-- Lo que ofrezco -->
-<section class="py-24 px-8 bg-surface-container">
-<div class="max-w-7xl mx-auto text-center">
-<h2 class="text-4xl font-serif mb-16" style="">¿Cómo puedo acompañarte?</h2>
-<div class="max-w-3xl mx-auto bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] editorial-shadow text-left">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-<div>
-<h3 class="text-2xl font-serif mb-2" style="">Taller Primero Yo — El Inicio</h3>
-<p class="text-on-surface-variant italic mb-4" style="">La puerta de entrada. 90 min · Online</p>
-</div>
-<a class="text-primary font-medium hover:underline flex items-center gap-2 group transition-all" href="#taller-detalle">
-                            Ver todos los detalles <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- El Taller Detalle -->
-<section class="py-24 px-8 max-w-7xl mx-auto" id="taller-detalle">
-<div class="bg-surface-container-low rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-sm">
-<div class="p-8 lg:p-16 mx-auto max-w-4xl">
-<h2 class="text-5xl font-serif mb-4" style="">Primero Yo: El Inicio</h2>
-<p class="text-2xl font-serif italic text-on-surface-variant mb-10" style="">Descubrí en 90 minutos cómo reconectar con vos misma...</p>
-<div class="space-y-8 mb-12">
-<div>
-<p class="font-bold uppercase text-xs tracking-widest text-primary mb-4" style="">En 90 minutos vas a:</p>
-<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Reconectar con tu cuerpo</li>
-<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Identificar qué te quitas</li>
-<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Descubrir por qué no duran los habitos</li>
-<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> Crear TU plan realista</li>
-<li class="flex items-center gap-3 text-on-surface-variant" style=""><span class="material-symbols-outlined text-primary scale-75" style="">check_circle</span> 3 momentos concretos</li>
-</ul>
-</div>
-<div class="bg-surface-container-highest/30 p-6 rounded-2xl">
-<p class="font-bold uppercase text-xs tracking-widest text-primary mb-4" style="">Incluye:</p>
-<div class="flex flex-wrap gap-3">
-<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Taller grabado</span>
-<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Ebook</span>
-<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Hoja de trabajo</span>
-<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Mini guía PDF</span>
-<span class="bg-surface px-4 py-2 rounded-xl text-sm editorial-shadow" style="">Descuento exclusivo</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col sm:flex-row items-center gap-6">
-<a class="gradient-button text-on-primary inline-block text-center w-full sm:w-auto px-10 py-4 rounded-full text-lg font-medium" href="#formulario">Quiero mi lugar</a>
-<span class="text-on-surface-variant italic text-sm flex items-center gap-2" style="">
-<span class="material-symbols-outlined text-error scale-75" style='font-variation-settings: "FILL" 1;'>error</span> 
-                            Solo 30 plazas disponibles.
-                        </span>
-</div>
-</div>
-</div>
-</section>
-<!-- Todo lo que vas a obtener -->
-<section class="py-24 px-8 bg-surface-container-low">
-<div class="max-w-5xl mx-auto">
-<div class="text-center mb-16">
-<span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Lo que incluye</span>
-<h2 class="text-4xl lg:text-5xl font-serif">Todo lo que vas a obtener</h2>
-<p class="text-on-surface-variant mt-4 max-w-xl mx-auto text-lg">Un paquete completo para que salgas del taller con herramientas reales en la mano — y no solo con buenas intenciones.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow flex flex-col gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" style='font-variation-settings: "FILL" 1;'>play_circle</span>
-<div>
-<h3 class="font-serif text-xl mb-2">Taller grabado — 90 min</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Acceso de por vida a la grabación completa. Lo revisás cuando lo necesitás, a tu ritmo y sin apuro.</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow flex flex-col gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" style='font-variation-settings: "FILL" 1;'>menu_book</span>
-<div>
-<h3 class="font-serif text-xl mb-2">Ebook "Primero Yo"</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Guía digital con los conceptos y herramientas clave del taller para tener siempre a mano.</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow flex flex-col gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" style='font-variation-settings: "FILL" 1;'>edit_note</span>
-<div>
-<h3 class="font-serif text-xl mb-2">Hoja de trabajo</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Ejercicios concretos para aplicar lo aprendido directamente en tu vida cotidiana, ese mismo día.</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow flex flex-col gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" style='font-variation-settings: "FILL" 1;'>checklist</span>
-<div>
-<h3 class="font-serif text-xl mb-2">Mini guía de hábitos</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Tus tres momentos diarios de autocuidado, estructurados y listos para implementar desde el día uno.</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow flex flex-col gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" style='font-variation-settings: "FILL" 1;'>local_offer</span>
-<div>
-<h3 class="font-serif text-xl mb-2">Descuento exclusivo</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Acceso prioritario y precio especial para el programa de coaching personalizado — solo para participantes del taller.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Formulario -->
-<section class="py-24 px-8 bg-surface">
-<div class="max-w-3xl mx-auto bg-surface-container-lowest p-8 lg:p-16 rounded-[3rem] editorial-shadow border border-outline-variant/10" id="formulario">
-<div class="text-center mb-12" id="signup-heading">
-<h2 class="text-4xl font-serif mb-4" style="">Sumate</h2>
-<p class="text-on-surface-variant italic" style="">Dejá tus datos y te envío el ingreso por privado.</p>
-</div>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSfFcTDbuHnZxL0-9OAwiWizSVnyma4UPgBW8wX_Q-ZV8ldQsg/formResponse" class="space-y-8" id="signup-form" method="POST" target="hidden_iframe">
-<div class="grid md:grid-cols-2 gap-8">
-<div class="space-y-2">
-<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">¿Cómo te llamás?</label>
-<input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.84739912" placeholder="Tu nombre" required type="text"/>
-</div>
-<div class="space-y-2">
-<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">Email</label>
-<input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.561321549" placeholder="hola@ejemplo.com" required type="email"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">Ubicación</label>
-<input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.1278154470" placeholder="Ciudad, País" required type="text"/>
-</div>
-<div class="space-y-2">
-<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">¿Qué es lo que más te cuesta?</label>
-<select class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.1418924858" required>
-<option disabled selected value="">Elegí una opción</option>
-<option>Habitos</option>
-<option>Ponerme primero</option>
-<option>Saber que quiero</option>
-<option>Sostener cambios</option>
-<option>Todo lo anterior</option>
-</select>
-</div>
-<div class="space-y-2">
-<label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold" style="">¿Cómo llegaste?</label>
-<select class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" name="entry.1493886869" required>
-<option disabled selected value="">Elegí una opción</option>
-<option>Instagram</option>
-<option>Recomendacion</option>
-<option>Google</option>
-<option>Otra red</option>
-<option>Otro</option>
-</select>
-</div>
-<div class="pt-6">
-<button class="w-full gradient-button text-on-primary py-5 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all" style="" type="submit">
-                            Sí, quiero comenzar mi cambio 🌸
-                        </button>
-<p class="text-center text-xs text-on-surface-variant mt-4 italic" style="">Sin spam. Solo contenido de valor.</p>
-</div>
-</form>
-<div class="text-center py-12" id="thankyou" style="display:none;">
-<span class="material-symbols-outlined text-primary text-6xl mb-6 block" style='font-variation-settings: "FILL" 1;'>favorite</span>
-<h3 class="text-4xl font-serif text-primary mb-4" style="">¡Listo, qué alegría tenerte acá!</h3>
-<p class="text-xl font-serif italic text-on-surface-variant mb-2" style="">Recibimos tu mensaje 🌸</p>
-<p class="text-lg text-on-surface-variant" style="">Te vamos a avisar apenas abran las plazas.</p>
-</div>
-</div>
-</section>
-<!-- Cierre -->
-<section class="py-32 px-8 text-center max-w-4xl mx-auto">
-<h2 class="text-5xl lg:text-6xl font-serif italic text-primary leading-tight mb-12" style="">
-                Tu turno no es cuando termines con todo lo demás. Tu turno es ahora.
-            </h2>
-<div class="flex flex-col items-center gap-4">
-<span class="material-symbols-outlined text-primary text-4xl" style="">eco</span>
-</div>
-</section>
+
+  <!-- ─── HERO ─── -->
+  <section class="relative px-8 py-20 lg:py-32 max-w-4xl mx-auto text-center flex flex-col items-center">
+    <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-widest mb-8">
+      🌿 NUTRICIÓN · FITNESS · MENTALIDAD
+    </span>
+    <p class="text-lg md:text-xl font-serif italic text-on-surface-variant max-w-xl mx-auto mb-6">¿Un día no comés nada y al otro te comés todo? Sabés más o menos qué hacer... pero no tenés una rutina que se sostenga.</p>
+    <h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8">
+      Ayudo a mujeres ocupadas a <span class="text-primary">definirse</span> y <span class="text-primary">sostener hábitos fitness</span> para siempre.
+    </h1>
+    <a class="gradient-button text-on-primary px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" href="#formulario">
+      Quiero ver la clase gratuita <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  </section>
+
+  <!-- ─── FORMULARIO + VIDEO (el video de fondo se ve borroso hasta completar el formulario) ─── -->
+  <section class="py-24 px-8 bg-surface-container-low" id="formulario">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="text-4xl lg:text-5xl font-serif mb-3">Tu clase gratuita</h2>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto w-full rounded-[2rem] overflow-hidden editorial-shadow min-h-[560px] md:min-h-[620px]" id="video-stage">
+      <!-- video de fondo: silenciado, sin controles, sobredimensionado a propósito para cubrir el recuadro -->
+      <iframe allow="autoplay; encrypted-media" class="absolute top-1/2 left-1/2 pointer-events-none blur-2xl scale-110" frameborder="0" id="class-video" src="https://www.youtube.com/embed/iWvnGj0SrZE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=iWvnGj0SrZE&amp;controls=0&amp;disablekb=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" style="width:250%;height:250%;transform:translate(-50%,-50%);" title="Tu clase gratuita"></iframe>
+      <!-- velo oscuro para que la tarjeta se lea bien sobre el video -->
+      <div class="absolute inset-0 bg-on-surface/45" id="video-tint"></div>
+
+      <!-- tarjeta del formulario, superpuesta sobre el video -->
+      <div class="absolute inset-0 flex items-center justify-center p-6" id="gate-card">
+        <div class="w-full max-w-md bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-outline-variant/10">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl lg:text-3xl font-serif mb-3">Antes de ver la clase...</h3>
+            <p class="text-on-surface-variant text-sm">Dejame tu nombre y mail y te la abro al toque.</p>
+          </div>
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSf84kUvNHOLinCxx4y8Jt9LJquuwbomEmyUNSG_6x3MUUDkUw/formResponse" id="gate-form" method="POST" target="hidden_iframe">
+            <div class="space-y-5">
+              <div class="space-y-2">
+                <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Nombre</label>
+                <input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3 rounded-t-lg" name="entry.2100012103" placeholder="Tu nombre" required type="text"/>
+              </div>
+              <div class="space-y-2">
+                <label class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Email</label>
+                <input class="w-full bg-surface-container-low border-0 border-b border-outline focus:ring-0 focus:border-primary transition-all p-3 rounded-t-lg" name="entry.668679109" placeholder="hola@ejemplo.com" required type="email"/>
+              </div>
+            </div>
+            <div class="pt-7">
+              <button class="w-full gradient-button text-on-primary py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" type="submit">
+                Ver la clase ahora <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+              <p class="text-center text-xs text-on-surface-variant mt-4 italic">Cero spam. Te escribo yo, Agus — no un robot.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10 hidden-section" id="video-cta">
+      <button class="gradient-button text-on-primary px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" onclick="return openCalendly(event)">
+        Quiero agendar mi llamada <span class="material-symbols-outlined">arrow_forward</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ─── LO QUE VAS A LOGRAR ─── -->
+  <section class="py-20 px-8 bg-surface-container-low">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Lo que vas a lograr</span>
+        <h2 class="text-4xl lg:text-5xl font-serif mb-6">Esto es lo que cambia cuando empezás</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Dejás de pasar de "no como nada" a "como todo" en el mismo día.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Organizás la semana sin vivir pidiendo delivery.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Sabés qué comer y cuánto — sin obsesionarte contando nada.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Le bajás el volumen a la ansiedad con lo dulce.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Convertís el gimnasio en una rutina real, no en una promesa de lunes.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Tenés a alguien acompañándote de cerca, no juzgándote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ASÍ ES TRABAJAR CONMIGO (fusión de sesiones 1:1 + inversión) ─── -->
+  <section class="py-24 px-8" id="trabajar-conmigo">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Acompañamiento personalizado</span>
+      <h2 class="text-4xl lg:text-5xl font-serif mb-6">Así es trabajar conmigo</h2>
+      <p class="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12">El programa te da estructura día a día. Las sesiones 1:1 resuelven lo que ningún plan solo puede — tus bloqueos, tu contexto, tus preguntas. Esto es exactamente lo que te llevás:</p>
+      <div class="bg-surface-container-lowest rounded-[3rem] p-8 lg:p-14 editorial-shadow border border-outline-variant/10 text-left">
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <p class="text-lg text-on-surface-variant">Plan de nutrición personalizado, con ajustes en el proceso.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <p class="text-lg text-on-surface-variant">Plan de movimiento adaptado a tu rutina real.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <p class="text-lg text-on-surface-variant">Plan de mentalidad para sostener lo que empezás.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <p class="text-lg text-on-surface-variant">6 sesiones 1:1 online (2 por mes), a tu ritmo.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <p class="text-lg text-on-surface-variant">Soporte por WhatsApp y email, lunes a viernes.</p>
+          </li>
+        </ul>
+      </div>
+      <span class="inline-flex items-center gap-2 text-on-surface-variant italic text-sm mt-8">
+        <span class="material-symbols-outlined text-error scale-75" style='font-variation-settings: "FILL" 1;'>error</span>
+        Cada mes abro un número limitado de lugares para poder acompañarte de cerca.
+      </span>
+    </div>
+  </section>
+
+  <!-- ─── ¿ES PARA VOS? (filtro) ─── -->
+  <section class="py-24 px-8 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">— ¿Es para vos? —</span>
+        <h2 class="text-4xl lg:text-5xl font-serif">seamos honestas: esto no es para todas</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-surface-container-lowest border border-outline-variant/10 rounded-[2rem] p-8 editorial-shadow">
+          <h3 class="flex items-center gap-2 font-serif text-xl mb-6 text-primary">
+            <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span> Es para vos si
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Sos una mujer profesional o emprendedora exitosa, pero sentís que en tus hábitos y tu cuerpo no lográs sostener nada.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Ya intentaste dietas, coaches o nutricionistas y sentís que "tampoco funcionó".</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Sabés que el problema no es falta de información, sino no poder sostenerlo en el tiempo.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Querés un proceso personalizado, no un plan genérico que ignora tu vida real.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Estás lista para trabajar tu mentalidad, no solo tu plato.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-surface-container-high border border-outline-variant rounded-[2rem] p-8 editorial-shadow">
+          <h3 class="flex items-center gap-2 font-serif text-xl mb-6 text-error">
+            <span class="material-symbols-outlined">block</span> No es para vos si
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Buscás una dieta mágica que te dé resultados sin cambiar nada de tu rutina.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">No estás dispuesta a sostener pequeños cambios en el tiempo.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Preferís que te digan qué hacer sin entender el por qué.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Esperás resultados inmediatos — el cambio real no es magia, es proceso.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Te resistís a mirar tu mentalidad y solo querés "el plan de comidas".</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIOS ───
+       Para agregar más, copiá un bloque <div class="bg-surface-container-lowest ..."> completo.
+  -->
+  <section class="py-24 px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Testimonios</span>
+        <h2 class="text-4xl lg:text-5xl font-serif mb-4">Lo que dicen quienes ya vivieron el proceso</h2>
+        <p class="text-on-surface-variant max-w-xl mx-auto text-lg">Historias reales de mujeres que se animaron a empezar.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-outline-variant/10 flex flex-col">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+          <p class="text-on-surface-variant leading-relaxed mb-6 flex-1">Cuando empecé con Agustina pensaba que necesitaba una dieta. Hoy me doy cuenta de que lo que necesitaba era aprender a cuidarme sin dejar de vivir. Tengo un trabajo muy demandante, dos hijos y siempre me ponía última. Con su acompañamiento aprendí a organizarme, a disfrutar de la comida sin culpa y a entrenar de una manera que realmente puedo sostener. Lo que más valoro es que nunca sentí presión, sino contención y herramientas para construir hábitos reales. Hoy tengo más energía, me siento más segura conmigo misma y, por primera vez, siento que este cambio llegó para quedarse.</p>
+          <p class="font-serif italic text-primary">— Caro</p>
+        </div>
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-outline-variant/10 flex flex-col">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+          <p class="text-on-surface-variant leading-relaxed mb-6 flex-1">Agustina, además de una excelente profesional, es una excelente persona, dotada de mucha sensibilidad, empatía y sentido común. Nos enseñó muchísimo acerca de tener nuevos y buenos hábitos alimenticios sin torturarse, y siempre disfrutando de los buenos momentos en la vida. Es comprensiva a la vez que rigurosa, y hace un seguimiento natural y muy motivador, basado en su seguridad, enorme experiencia y ganas de ayudarte. Le agradecemos todos los cambios que nos ayudó a hacer y que logró. Sin duda la mantenemos en nuestros contactos más queridos e imprescindibles.</p>
+          <p class="font-serif italic text-primary">— Begoña</p>
+        </div>
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-outline-variant/10 flex flex-col">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+          <p class="text-on-surface-variant leading-relaxed mb-6 flex-1">Lo que más me sorprendió fue que no solo cambió mi alimentación, cambió mi forma de pensar. Con Agustina entendí que priorizarme no significa hacer todo perfecto, sino ser constante. Me enseñó a escuchar mi cuerpo, a entrenar según mi realidad y a dejar de sentir culpa por disfrutar una salida o una comida especial. Su seguimiento es increíble, siempre está presente y logra que una se sienta acompañada en cada paso. Hoy me siento más fuerte, con más confianza y con hábitos que realmente disfruto.</p>
+          <p class="font-serif italic text-primary">— Mariela</p>
+        </div>
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-outline-variant/10 flex flex-col">
+          <span class="material-symbols-outlined text-primary text-3xl mb-4" style='font-variation-settings: "FILL" 1;'>format_quote</span>
+          <p class="text-on-surface-variant leading-relaxed mb-6 flex-1">Trabajar este tiempo con vos fue genial, me sentí acompañada en todo momento, estás súper atenta en cada comida, en cada recomendación, a medida que pasa el tiempo me siento más motivada, que estés en cada detalle me hace sentirme más segura del proceso! Con vos siento que realmente puedo.</p>
+          <p class="font-serif italic text-primary">— Romi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESERVAR LLAMADA (CTA final) ─── -->
+  <section class="py-24 px-8 bg-surface-container-low" id="reservar">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Último paso</span>
+      <h2 class="text-4xl lg:text-5xl font-serif mb-4">Reservá tu llamada gratuita</h2>
+      <p class="text-on-surface-variant text-lg">Una charla de 15 minutos, sin compromiso, para ver si el programa es para vos.</p>
+      <p class="text-on-surface-variant italic text-sm mt-4">Recordá: cada mes abro un número limitado de lugares.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <button class="gradient-button text-on-primary w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" onclick="return openCalendly(event)">
+          Reservar llamada <span class="material-symbols-outlined">calendar_month</span>
+        </button>
+        <a class="border border-outline text-on-surface w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium hover:bg-surface-container-lowest transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
+          Escribime por WhatsApp
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </main>
-<!-- Footer -->
+
+<!-- ─── FOOTER ─── -->
 <footer class="bg-[#E4D6BE] py-12 px-8">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
-<div class="text-center md:text-left">
-<span class="text-xl font-serif italic text-[#241B1F]" style="">Sano Destino</span>
-<p class="text-on-surface-variant text-sm mt-2" style="">© 2026 Sano Destino.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino" style="">Instagram: @sanodestino</a>
-<a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com" style="">Email: sanodestino@gmail.com</a>
-<a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="#" style="">Privacy Policy</a>
-</div>
-</div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+    <div class="text-center md:text-left">
+      <span class="text-xl font-serif italic text-[#241B1F]">Sano Destino</span>
+      <p class="text-on-surface-variant text-sm mt-2">© 2026 Sano Destino.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8">
+      <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino">Instagram: @sanodestino</a>
+      <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com">Email: sanodestino@gmail.com</a>
+    </div>
+  </div>
 </footer>
+
 <iframe name="hidden_iframe" style="display:none;"></iframe>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<!-- ─── SCRIPT ─── -->
 <script>
+  var CALENDLY_URL = 'https://calendly.com/sanodestino/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=241B1F&primary_color=A91E5C';
+
+  function openCalendly(e) {
+    if (e) e.preventDefault();
+    if (window.Calendly) {
+      Calendly.initPopupWidget({ url: CALENDLY_URL });
+    } else {
+      window.open(CALENDLY_URL, '_blank');
+    }
+    return false;
+  }
+
   (function () {
-    var form = document.getElementById('signup-form');
-    var heading = document.getElementById('signup-heading');
-    var thankyou = document.getElementById('thankyou');
-    form.addEventListener('submit', function () {
+    var gateForm = document.getElementById('gate-form');
+    var gateCard = document.getElementById('gate-card');
+    var videoTint = document.getElementById('video-tint');
+    var videoStage = document.getElementById('video-stage');
+    var classVideo = document.getElementById('class-video');
+    var videoCta = document.getElementById('video-cta');
+
+    gateForm.addEventListener('submit', function () {
       setTimeout(function () {
-        form.style.display = 'none';
-        heading.style.display = 'none';
-        thankyou.style.display = 'block';
-        document.getElementById('formulario').scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 600);
+        // saca la tarjeta y el velo, y libera el recuadro para que tome proporción de video normal
+        gateCard.style.display = 'none';
+        videoTint.style.display = 'none';
+        videoStage.classList.remove('min-h-[560px]', 'md:min-h-[620px]');
+        videoStage.style.aspectRatio = '16 / 9';
+
+        // recarga el video sin blur, sin mute y con controles — el player real
+        classVideo.removeAttribute('style');
+        classVideo.className = 'absolute inset-0 w-full h-full';
+        classVideo.src = 'https://www.youtube.com/embed/iWvnGj0SrZE?rel=0&modestbranding=1';
+        classVideo.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        classVideo.allowFullscreen = true;
+
+        videoCta.classList.remove('hidden-section');
+        videoStage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 700);
     });
   })();
 </script>
-</body></html>
+
+
+</body>
+</html>
