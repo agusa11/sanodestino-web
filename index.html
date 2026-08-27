@@ -115,7 +115,7 @@ tailwind.config = {
 
     <div class="relative max-w-3xl mx-auto w-full rounded-[2rem] overflow-hidden editorial-shadow min-h-[560px] md:min-h-[620px] mt-4" id="video-stage">
       <!-- video de fondo: silenciado, sin controles, sobredimensionado a propósito para cubrir el recuadro -->
-      <iframe allow="autoplay; encrypted-media" class="absolute top-1/2 left-1/2 pointer-events-none blur-2xl scale-110" frameborder="0" id="class-video" src="https://www.youtube.com/embed/iWvnGj0SrZE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=iWvnGj0SrZE&amp;controls=0&amp;disablekb=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" style="width:250%;height:250%;transform:translate(-50%,-50%);" title="Tu clase gratuita"></iframe>
+      <iframe allow="autoplay; encrypted-media" class="absolute top-1/2 left-1/2 pointer-events-none blur-2xl scale-110" frameborder="0" id="class-video" src="https://www.youtube.com/embed/D2vCxmAgECQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=D2vCxmAgECQ&amp;controls=0&amp;disablekb=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" style="width:250%;height:250%;transform:translate(-50%,-50%);" title="Tu clase gratuita"></iframe>
       <!-- velo oscuro para que la tarjeta se lea bien sobre el video -->
       <div class="absolute inset-0 bg-on-surface/45" id="video-tint"></div>
 
@@ -405,7 +405,7 @@ tailwind.config = {
         // recarga el video sin blur, sin mute y con controles — el player real
         classVideo.removeAttribute('style');
         classVideo.className = 'absolute inset-0 w-full h-full';
-        classVideo.src = 'https://www.youtube.com/embed/iWvnGj0SrZE?rel=0&modestbranding=1';
+        classVideo.src = 'https://www.youtube.com/embed/D2vCxmAgECQ?rel=0&modestbranding=1';
         classVideo.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         classVideo.allowFullscreen = true;
 
