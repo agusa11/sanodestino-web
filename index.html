@@ -81,6 +81,7 @@ tailwind.config = {
   .font-serif { font-family: 'Newsreader', serif; }
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
   .gradient-button { background: linear-gradient(45deg, #A91E5C 0%, #C93774 100%); }
+  .whatsapp-button { background: linear-gradient(45deg, #006b1f 0%, #0a872c 100%); }
   .editorial-shadow { box-shadow: 0 10px 40px -15px rgba(36, 27, 31, 0.06); }
   .hidden-section { display: none; }
 </style>
@@ -92,9 +93,9 @@ tailwind.config = {
   <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
     <a class="text-2xl font-serif italic text-[#A91E5C] hover:opacity-80 transition-opacity" href="index.html">Sano Destino</a>
     <div class="flex items-center gap-5">
-      <a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-all" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank" aria-label="Escribime por WhatsApp">
+      <a class="whatsapp-button text-white inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
+        <span class="hidden sm:inline">Escribime por WhatsApp</span>
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
-        <span class="hidden sm:inline text-sm">¿Preguntas? Escribime por WhatsApp</span>
       </a>
       <a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="#reservar">Reservar llamada</a>
     </div>
@@ -109,7 +110,7 @@ tailwind.config = {
       🌿 NUTRICIÓN · FITNESS · MENTALIDAD
     </span>
     <h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8">
-      Ayudo a mujeres ocupadas a <span class="text-primary">definir su cuerpo</span> y <span class="text-primary">sostener hábitos fitness</span> para siempre.
+      Ayudo a mujeres profesionales a <span class="text-primary">bajar grasa sin perder músculo</span> y mejorar sus <span class="text-primary">hábitos</span> y su <span class="text-primary">confianza</span>.
     </h1>
     <p class="text-lg md:text-xl font-serif italic text-on-surface-variant max-w-xl mx-auto mb-6">¿Un día no comés nada y al otro te comés todo? Sabés más o menos qué hacer... pero no tenés una rutina que se sostenga.</p>
 
@@ -153,7 +154,7 @@ tailwind.config = {
     </div>
 
     <div class="flex justify-center mt-10 hidden-section" id="video-cta">
-      <a class="border border-outline text-on-surface w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium hover:bg-surface-container-low transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
+      <a class="whatsapp-button text-white w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
         Escribime por WhatsApp
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
       </a>
@@ -345,7 +346,7 @@ tailwind.config = {
         <button class="gradient-button text-on-primary w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" onclick="return openCalendly(event)">
           Reservar llamada <span class="material-symbols-outlined">calendar_month</span>
         </button>
-        <a class="border border-outline text-on-surface w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium hover:bg-surface-container-lowest transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
+        <a class="whatsapp-button text-white w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
           Escribime por WhatsApp
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
         </a>
@@ -363,7 +364,6 @@ tailwind.config = {
       <p class="text-on-surface-variant text-sm mt-2">© 2026 Sano Destino.</p>
     </div>
     <div class="flex flex-wrap justify-center gap-8">
-      <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="https://instagram.com/sanodestino">Instagram: @sanodestino</a>
       <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com">Email: sanodestino@gmail.com</a>
     </div>
   </div>
