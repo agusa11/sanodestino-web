@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sano Destino | Programa + Mentoría 1:1</title>
+<title>AgusNietoFit | Programa + Mentoría 1:1</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
@@ -90,14 +90,14 @@ tailwind.config = {
 
 <!-- ─── NAV ─── -->
 <nav class="fixed top-0 w-full z-50 bg-[#FAF6F0]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(36,27,31,0.06)]">
-  <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
-    <a class="text-2xl font-serif italic text-[#A91E5C] hover:opacity-80 transition-opacity" href="index.html">Sano Destino</a>
-    <div class="flex items-center gap-5">
-      <a class="whatsapp-button text-white inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
+  <div class="flex justify-between items-center gap-3 px-4 sm:px-8 py-5 max-w-7xl mx-auto">
+    <a class="text-2xl font-serif italic text-[#A91E5C] hover:opacity-80 transition-opacity" href="index.html">AgusNietoFit</a>
+    <div class="flex items-center gap-2 sm:gap-5">
+      <a class="whatsapp-button text-white inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
         <span class="hidden sm:inline">Escribime por WhatsApp</span>
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
       </a>
-      <a class="gradient-button text-white px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all" href="#reservar">Reservar llamada</a>
+      <a class="gradient-button text-white px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap hover:opacity-90 transition-all" href="#reservar"><span class="sm:hidden">Mi charla</span><span class="hidden sm:inline">Quiero mi charla de claridad</span></a>
     </div>
   </div>
 </nav>
@@ -110,9 +110,10 @@ tailwind.config = {
       🌿 NUTRICIÓN · FITNESS · MENTALIDAD
     </span>
     <h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8">
-      Ayudo a mujeres profesionales a <span class="text-primary">bajar grasa sin perder músculo</span> y mejorar sus <span class="text-primary">hábitos</span> y su <span class="text-primary">confianza</span>.
+      Transformá tu cuerpo <span class="text-primary">sin poner tu vida en pausa</span>.
     </h1>
-    <p class="text-lg md:text-xl font-serif italic text-on-surface-variant max-w-xl mx-auto mb-6">¿Un día no comés nada y al otro te comés todo? Sabés más o menos qué hacer... pero no tenés una rutina que se sostenga.</p>
+    <p class="text-lg md:text-xl text-primary max-w-2xl mx-auto mb-4">Te ayudo a perder grasa sin perder músculo, con un sistema adaptado a tu agenda de mujer profesional y tu estilo de vida.</p>
+    <p class="text-lg md:text-xl font-serif italic text-on-surface-variant max-w-xl mx-auto mb-6 flex flex-col items-center gap-2"><span>Mirá la clase que te preparé sobre:</span> <span class="not-italic text-primary font-medium">Cómo conseguir un cuerpo definido sin sacrificar tu vida.</span> <span class="material-symbols-outlined not-italic text-primary animate-bounce">arrow_downward</span></p>
 
     <div class="relative max-w-3xl mx-auto w-full rounded-[2rem] overflow-hidden editorial-shadow min-h-[560px] md:min-h-[620px] mt-4" id="video-stage">
       <!-- video de fondo: silenciado, sin controles, sobredimensionado a propósito para cubrir el recuadro -->
@@ -161,37 +162,67 @@ tailwind.config = {
     </div>
   </section>
 
+  <!-- ─── TE IDENTIFICÁS ─── -->
+  <section class="py-20 px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-6">Quizás te identificás con alguna de estas situaciones:</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">arrow_forward</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Empezás a cuidarte, pero cuando tu agenda se complica, dejás de priorizarte.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">arrow_forward</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Entrenás, pero no conseguís la definición física que buscás.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">arrow_forward</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Pasás de comer de manera muy estricta a sentir que perdiste el control.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">arrow_forward</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Viajás, salís a restaurantes o tenés semanas intensas y sentís que todo tu progreso se desordena.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">arrow_forward</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Sabés muchas cosas sobre nutrición, pero te cuesta convertirlas en hábitos que puedas mantener.</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary mt-1">arrow_forward</span>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Estás cansada de volver a empezar cada lunes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── LO QUE VAS A LOGRAR ─── -->
   <section class="py-20 px-8 bg-surface-container-low">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-14">
-        <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Lo que vas a lograr</span>
-        <h2 class="text-4xl lg:text-5xl font-serif mb-6">Esto es lo que cambia cuando empezás</h2>
+        <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-6">Lo que vas a lograr</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Dejás de pasar de "no como nada" a "como todo" en el mismo día.</p>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Trabajar hacia una mayor definición física y una pérdida de grasa sostenible.</p>
         </div>
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Organizás la semana sin vivir pidiendo delivery.</p>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Preservar masa muscular mientras avanzás hacia tu objetivo.</p>
         </div>
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Sabés qué comer y cuánto — sin obsesionarte contando nada.</p>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Construir hábitos compatibles con tu agenda y tus preferencias.</p>
         </div>
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Le bajás el volumen a la ansiedad con lo dulce.</p>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Desarrollar una relación más flexible y consistente con la alimentación y el entrenamiento.</p>
         </div>
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Convertís el gimnasio en una rutina real, no en una promesa de lunes.</p>
-        </div>
-        <div class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Tenés a alguien acompañándote de cerca, no juzgándote.</p>
+          <p class="text-lg text-on-surface-variant border-b border-outline-variant/30 pb-4 w-full">Aprender a retomar tu rutina sin caer en el perfeccionismo ni en el todo o nada.</p>
         </div>
       </div>
     </div>
@@ -200,30 +231,28 @@ tailwind.config = {
   <!-- ─── ASÍ ES TRABAJAR CONMIGO (fusión de sesiones 1:1 + inversión) ─── -->
   <section class="py-24 px-8" id="trabajar-conmigo">
     <div class="max-w-3xl mx-auto text-center">
-      <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Acompañamiento personalizado</span>
-      <h2 class="text-4xl lg:text-5xl font-serif mb-6">Así es trabajar conmigo</h2>
-      <p class="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12">El programa te da estructura día a día. Las sesiones 1:1 resuelven lo que ningún plan solo puede — tus bloqueos, tu contexto, tus preguntas. Esto es exactamente lo que te llevás:</p>
+      <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-12">Acompañamiento personalizado</h2>
       <div class="bg-surface-container-lowest rounded-[3rem] p-8 lg:p-14 editorial-shadow border border-outline-variant/10 text-left">
         <ul class="space-y-6">
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <p class="text-lg text-on-surface-variant">Plan de nutrición personalizado, con ajustes en el proceso.</p>
+            <p class="text-lg text-on-surface-variant"><strong class="font-semibold text-on-surface">Nutrición adaptada a tu vida:</strong> una estrategia individual, práctica y compatible con tu vida social.</p>
           </li>
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <p class="text-lg text-on-surface-variant">Plan de movimiento adaptado a tu rutina real.</p>
+            <p class="text-lg text-on-surface-variant"><strong class="font-semibold text-on-surface">Movimiento con intención:</strong> entrenamiento adaptado a tu nivel y a tu tiempo, para que puedas sostenerlo.</p>
           </li>
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <p class="text-lg text-on-surface-variant">Plan de mentalidad para sostener lo que empezás.</p>
+            <p class="text-lg text-on-surface-variant"><strong class="font-semibold text-on-surface">Hábitos que resisten las semanas difíciles:</strong> dejamos atrás el perfeccionismo y el todo o nada.</p>
           </li>
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <p class="text-lg text-on-surface-variant">6 sesiones 1:1 online (2 por mes), a tu ritmo.</p>
+            <p class="text-lg text-on-surface-variant"><strong class="font-semibold text-on-surface">Seguimiento y ajustes:</strong> 6 sesiones 1:1 online (2 por mes) para revisar tu evolución y ajustar la estrategia.</p>
           </li>
           <li class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-            <p class="text-lg text-on-surface-variant">Soporte por WhatsApp y email, lunes a viernes.</p>
+            <p class="text-lg text-on-surface-variant"><strong class="font-semibold text-on-surface">Soporte cercano:</strong> WhatsApp y email, de lunes a viernes.</p>
           </li>
         </ul>
       </div>
@@ -234,65 +263,83 @@ tailwind.config = {
     </div>
   </section>
 
+  <!-- ─── SOBRE MÍ ─── -->
+  <section class="py-24 px-8">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+      <!-- foto circular con dos círculos decorativos detrás (relleno rosa + contorno) -->
+      <div class="md:col-span-2 relative w-full max-w-xs mx-auto aspect-square">
+        <div class="absolute inset-0 rounded-full bg-primary-fixed translate-x-5 translate-y-5"></div>
+        <div class="absolute inset-0 rounded-full border border-primary/40 -translate-x-4 -translate-y-4"></div>
+        <img alt="Agus Nieto, nutricionista y mentora" class="relative w-full h-full object-cover rounded-full editorial-shadow ring-8 ring-surface" src="agus-perfil.jpg"/>
+      </div>
+      <div class="md:col-span-3">
+        <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-6">Sobre mí</h2>
+        <p class="text-lg text-on-surface-variant mb-5">Soy Agus Nieto, nutricionista, mentora y creadora de un enfoque de fitness pensado para la vida real.</p>
+        <p class="text-lg text-on-surface-variant mb-5">Creo que cuidar tu cuerpo no debería exigirte renunciar a tu carrera, a tus viajes, a tus relaciones ni a las experiencias que disfrutás.</p>
+        <p class="text-lg text-on-surface-variant mb-5">Mi formación en nutrición me dio las herramientas para trabajar sobre la alimentación y los objetivos físicos. Mi propia experiencia construyendo hábitos en distintas etapas y contextos de mi vida también me enseñó algo importante: una estrategia puede parecer perfecta en el papel y, aun así, no funcionar si no encaja con la realidad de una persona.</p>
+        <p class="text-xl font-serif italic text-on-surface">Mi objetivo es que avances hacia el cuerpo que querés construir y que, al mismo tiempo, desarrolles una manera de cuidarte que puedas sostener.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── ¿ES PARA VOS? (filtro) ─── -->
   <section class="py-24 px-8 bg-surface-container-low">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">— ¿Es para vos? —</span>
-        <h2 class="text-4xl lg:text-5xl font-serif">seamos honestas: esto no es para todas</h2>
+        <h2 class="text-4xl lg:text-5xl font-serif text-primary">¿Es para vos?</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-surface-container-lowest border border-outline-variant/10 rounded-[2rem] p-8 editorial-shadow">
           <h3 class="flex items-center gap-2 font-serif text-xl mb-6 text-primary">
-            <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span> Es para vos si
+            <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span> Este programa es para vos si…
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Sos una mujer profesional o emprendedora exitosa, pero sentís que en tus hábitos y tu cuerpo no lográs sostener nada.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Sos una mujer profesional o emprendedora que quiere priorizar su salud y su cuerpo.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Ya intentaste dietas, coaches o nutricionistas y sentís que "tampoco funcionó".</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Querés trabajar hacia una mayor definición física y una pérdida de grasa sin recurrir a restricciones extremas.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Sabés que el problema no es falta de información, sino no poder sostenerlo en el tiempo.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Valorás una estrategia personalizada en lugar de seguir un plan genérico.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Querés un proceso personalizado, no un plan genérico que ignora tu vida real.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Querés aprender a organizar tu alimentación y tu entrenamiento en torno a una agenda exigente.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Estás lista para trabajar tu mentalidad, no solo tu plato.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Estás dispuesta a comprometerte con pequeños cambios y a trabajar en la constancia.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5 scale-90">check_circle</span>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Buscás acompañamiento, seguimiento y herramientas para tomar mejores decisiones por tu cuenta.</p>
             </li>
           </ul>
         </div>
         <div class="bg-surface-container-high border border-outline-variant rounded-[2rem] p-8 editorial-shadow">
           <h3 class="flex items-center gap-2 font-serif text-xl mb-6 text-error">
-            <span class="material-symbols-outlined">block</span> No es para vos si
+            <span class="material-symbols-outlined">block</span> Probablemente no sea para vos si…
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Buscás una dieta mágica que te dé resultados sin cambiar nada de tu rutina.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Buscás una transformación instantánea o resultados garantizados.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">No estás dispuesta a sostener pequeños cambios en el tiempo.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Querés una dieta genérica sin participar en el proceso.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Preferís que te digan qué hacer sin entender el por qué.</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Esperás que otra persona haga todo por vos sin que tengas que implementar cambios.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Esperás resultados inmediatos — el cambio real no es magia, es proceso.</p>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5 scale-90">block</span>
-              <p class="text-on-surface-variant leading-relaxed text-sm">Te resistís a mirar tu mentalidad y solo querés "el plan de comidas".</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">No estás dispuesta a dedicar tiempo y atención a tu proceso durante las próximas 12 semanas.</p>
             </li>
           </ul>
         </div>
@@ -306,9 +353,7 @@ tailwind.config = {
   <section class="py-24 px-8">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Testimonios</span>
-        <h2 class="text-4xl lg:text-5xl font-serif mb-4">Lo que dicen quienes ya vivieron el proceso</h2>
-        <p class="text-on-surface-variant max-w-xl mx-auto text-lg">Historias reales de mujeres que se animaron a empezar.</p>
+        <h2 class="text-4xl lg:text-5xl font-serif text-primary">Lo que dicen quienes ya vivieron el proceso</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-outline-variant/10 flex flex-col">
@@ -338,13 +383,12 @@ tailwind.config = {
   <!-- ─── RESERVAR LLAMADA (CTA final) ─── -->
   <section class="py-24 px-8 bg-surface-container-low" id="reservar">
     <div class="max-w-3xl mx-auto text-center">
-      <span class="text-xs uppercase tracking-[0.2em] text-primary mb-4 block font-bold">Último paso</span>
-      <h2 class="text-4xl lg:text-5xl font-serif mb-4">Reservá tu llamada gratuita</h2>
+      <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-4">Reservá tu charla de claridad</h2>
       <p class="text-on-surface-variant text-lg">Una charla de 15 minutos, sin compromiso, para ver si el programa es para vos.</p>
       <p class="text-on-surface-variant italic text-sm mt-4">Recordá: cada mes abro un número limitado de lugares.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
         <button class="gradient-button text-on-primary w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" onclick="return openCalendly(event)">
-          Reservar llamada <span class="material-symbols-outlined">calendar_month</span>
+          Quiero mi charla de claridad <span class="material-symbols-outlined">calendar_month</span>
         </button>
         <a class="whatsapp-button text-white w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
           Escribime por WhatsApp
@@ -360,8 +404,8 @@ tailwind.config = {
 <footer class="bg-[#E4D6BE] py-12 px-8">
   <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
     <div class="text-center md:text-left">
-      <span class="text-xl font-serif italic text-[#241B1F]">Sano Destino</span>
-      <p class="text-on-surface-variant text-sm mt-2">© 2026 Sano Destino.</p>
+      <span class="text-xl font-serif italic text-[#241B1F]">AgusNietoFit</span>
+      <p class="text-on-surface-variant text-sm mt-2">© 2026 AgusNietoFit.</p>
     </div>
     <div class="flex flex-wrap justify-center gap-8">
       <a class="text-on-surface-variant hover:text-[#A91E5C] transition-all hover:underline underline-offset-4" href="mailto:sanodestino@gmail.com">Email: sanodestino@gmail.com</a>
