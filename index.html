@@ -97,7 +97,7 @@ tailwind.config = {
         <span class="hidden sm:inline">Escribime por WhatsApp</span>
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.12c-.24.68-1.19 1.24-1.95 1.4-.53.11-1.22.2-3.56-.76-2.99-1.24-4.92-4.27-5.07-4.47-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.05-2.49.24-.26.53-.32.71-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.24.58.81 2.01.88 2.15.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.22 1.37.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
       </a>
-      <a class="gradient-button text-white px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap hover:opacity-90 transition-all" href="#reservar"><span class="sm:hidden">Mi charla</span><span class="hidden sm:inline">Quiero mi charla de claridad</span></a>
+      <a class="gradient-button text-white px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap hover:opacity-90 transition-all" href="#reservar"><span class="sm:hidden">Mi cafecito</span><span class="hidden sm:inline">Quiero mi cafecito virtual</span></a>
     </div>
   </div>
 </nav>
@@ -112,12 +112,12 @@ tailwind.config = {
     <h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight text-on-surface mb-8">
       Transformá tu cuerpo <span class="text-primary">sin poner tu vida en pausa</span>.
     </h1>
-    <p class="text-lg md:text-xl text-primary max-w-2xl mx-auto mb-4">Te ayudo a perder grasa sin perder músculo, con un sistema adaptado a tu agenda de mujer profesional y tu estilo de vida.</p>
+    <p class="text-lg md:text-xl text-primary max-w-2xl mx-auto mb-4">Te ayudo a bajar grasa sin perder músculo, con un sistema adaptado a tu agenda de mujer profesional y tu estilo de vida.</p>
     <p class="text-lg md:text-xl font-serif italic text-on-surface-variant max-w-xl mx-auto mb-6 flex flex-col items-center gap-2"><span>Mirá la clase que te preparé sobre:</span> <span class="not-italic text-primary font-medium">Cómo conseguir un cuerpo definido sin sacrificar tu vida.</span> <span class="material-symbols-outlined not-italic text-primary animate-bounce">arrow_downward</span></p>
 
     <div class="relative max-w-3xl mx-auto w-full rounded-[2rem] overflow-hidden editorial-shadow min-h-[560px] md:min-h-[620px] mt-4" id="video-stage">
       <!-- video de fondo: silenciado, sin controles, sobredimensionado a propósito para cubrir el recuadro -->
-      <iframe allow="autoplay; encrypted-media" class="absolute top-1/2 left-1/2 pointer-events-none blur-2xl scale-110" frameborder="0" id="class-video" src="https://www.youtube.com/embed/D2vCxmAgECQ?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=D2vCxmAgECQ&amp;controls=0&amp;disablekb=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" style="width:250%;height:250%;transform:translate(-50%,-50%);" title="Tu clase gratuita"></iframe>
+      <iframe allow="autoplay; encrypted-media" class="absolute top-1/2 left-1/2 pointer-events-none blur-2xl scale-110" frameborder="0" id="class-video" src="https://www.youtube.com/embed/eHiqWMaMTz0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=eHiqWMaMTz0&amp;controls=0&amp;disablekb=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" style="width:250%;height:250%;transform:translate(-50%,-50%);" title="Tu clase gratuita"></iframe>
       <!-- velo oscuro para que la tarjeta se lea bien sobre el video -->
       <div class="absolute inset-0 bg-on-surface/45" id="video-tint"></div>
 
@@ -380,15 +380,80 @@ tailwind.config = {
     </div>
   </section>
 
+  <!-- ─── INVERSIÓN ─── -->
+  <section class="py-24 px-6 sm:px-8 bg-surface-container-low" id="inversion">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl lg:text-5xl font-serif text-primary leading-tight mb-6">Antes de decidirte, quiero que conozcas todo lo que incluye tu transformación.</h2>
+        <p class="text-lg font-serif italic text-on-surface-variant">Programa individual de transformación física · 12 semanas</p>
+      </div>
+      <div class="bg-surface-container-lowest rounded-[2rem] px-6 py-4 sm:px-10 sm:py-6 editorial-shadow border border-outline-variant/10">
+        <ul>
+          <li class="flex items-start gap-3 sm:gap-4 py-5 border-b border-outline-variant/40">
+            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">check_circle</span>
+            <div class="flex-1">
+              <p class="font-semibold text-on-surface">Estrategia nutricional individual</p>
+              <p class="text-sm text-on-surface-variant/80 mt-1">Adaptada a tus objetivos y necesidades.</p>
+            </div>
+            <span class="flex-shrink-0 whitespace-nowrap tabular-nums text-on-surface-variant pt-0.5">USD 120</span>
+          </li>
+          <li class="flex items-start gap-3 sm:gap-4 py-5 border-b border-outline-variant/40">
+            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">check_circle</span>
+            <div class="flex-1">
+              <p class="font-semibold text-on-surface">Plan de entrenamiento personalizado</p>
+              <p class="text-sm text-on-surface-variant/80 mt-1">Adaptado a tu nivel, disponibilidad y estilo de vida.</p>
+            </div>
+            <span class="flex-shrink-0 whitespace-nowrap tabular-nums text-on-surface-variant pt-0.5">USD 80</span>
+          </li>
+          <li class="flex items-start gap-3 sm:gap-4 py-5 border-b border-outline-variant/40">
+            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">check_circle</span>
+            <div class="flex-1">
+              <p class="font-semibold text-on-surface">6 sesiones individuales de seguimiento</p>
+              <p class="text-sm text-on-surface-variant/80 mt-1">Dos videollamadas al mes para revisar tu progreso y ajustar la estrategia.</p>
+            </div>
+            <span class="flex-shrink-0 whitespace-nowrap tabular-nums text-on-surface-variant pt-0.5">USD 400</span>
+          </li>
+          <li class="flex items-start gap-3 sm:gap-4 py-5 border-b border-outline-variant/40">
+            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">check_circle</span>
+            <div class="flex-1">
+              <p class="font-semibold text-on-surface">Seguimiento semanal y ajustes</p>
+              <p class="text-sm text-on-surface-variant/80 mt-1">Para revisar tus avances, identificar dificultades y ajustar el proceso.</p>
+            </div>
+            <span class="flex-shrink-0 whitespace-nowrap tabular-nums text-on-surface-variant pt-0.5">USD 80</span>
+          </li>
+          <li class="flex items-start gap-3 sm:gap-4 py-5 border-b border-outline-variant/40">
+            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5">check_circle</span>
+            <div class="flex-1">
+              <p class="font-semibold text-on-surface">Acompañamiento por WhatsApp</p>
+              <p class="text-sm text-on-surface-variant/80 mt-1">Para resolver dudas durante el programa, dentro de los horarios y condiciones acordados.</p>
+            </div>
+            <span class="flex-shrink-0 whitespace-nowrap tabular-nums text-on-surface-variant pt-0.5">USD 60</span>
+          </li>
+        </ul>
+        <!-- valor de referencia: a propósito más discreto que el precio final -->
+        <div class="flex items-baseline justify-between gap-4 pt-6 pb-2">
+          <span class="text-xs uppercase tracking-[0.2em] text-on-surface-variant/70 font-bold">Valor de referencia ilustrativo</span>
+          <span class="whitespace-nowrap tabular-nums text-lg text-on-surface-variant">USD 740</span>
+        </div>
+      </div>
+      <div class="gradient-button text-on-primary rounded-[2rem] px-8 py-12 mt-8 text-center editorial-shadow">
+        <span class="text-xs uppercase tracking-[0.25em] font-bold text-white/80 block mb-4">Tu inversión internacional</span>
+        <p class="font-serif lining-nums text-6xl lg:text-7xl leading-none mb-4">USD 450</p>
+        <p class="text-lg text-white/90">Acompañamiento individual durante 12 semanas.</p>
+      </div>
+      <p class="text-center text-on-surface-variant mt-5">Tarifa para residentes en Argentina: USD 400.</p>
+    </div>
+  </section>
+
   <!-- ─── RESERVAR LLAMADA (CTA final) ─── -->
-  <section class="py-24 px-8 bg-surface-container-low" id="reservar">
+  <section class="py-24 px-8" id="reservar">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-4">Reservá tu charla de claridad</h2>
+      <h2 class="text-4xl lg:text-5xl font-serif text-primary mb-4">Reservá tu cafecito virtual</h2>
       <p class="text-on-surface-variant text-lg">Una charla de 15 minutos, sin compromiso, para ver si el programa es para vos.</p>
       <p class="text-on-surface-variant italic text-sm mt-4">Recordá: cada mes abro un número limitado de lugares.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
         <button class="gradient-button text-on-primary w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" onclick="return openCalendly(event)">
-          Quiero mi charla de claridad <span class="material-symbols-outlined">calendar_month</span>
+          Quiero mi cafecito virtual <span class="material-symbols-outlined">calendar_month</span>
         </button>
         <a class="whatsapp-button text-white w-full sm:w-auto px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:opacity-90 transition-all inline-flex items-center justify-center gap-2" href="https://wa.me/message/3BAHJPJBO7OKN1" rel="noopener" target="_blank">
           Escribime por WhatsApp
@@ -449,7 +514,7 @@ tailwind.config = {
         // recarga el video sin blur, sin mute y con controles — el player real
         classVideo.removeAttribute('style');
         classVideo.className = 'absolute inset-0 w-full h-full';
-        classVideo.src = 'https://www.youtube.com/embed/D2vCxmAgECQ?rel=0&modestbranding=1';
+        classVideo.src = 'https://www.youtube.com/embed/eHiqWMaMTz0?rel=0&modestbranding=1';
         classVideo.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         classVideo.allowFullscreen = true;
 
